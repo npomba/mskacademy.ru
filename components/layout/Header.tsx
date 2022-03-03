@@ -3,6 +3,7 @@ import cn from 'classnames'
 import { useRouter } from 'next/router'
 import { getClassNames } from '@/helpers/index'
 import { TypeClassNames } from '@/types/index'
+import { GeneralHeaderTop } from '@/components/general'
 
 
 type TypeHeaderProps = TypeClassNames
@@ -13,7 +14,7 @@ const Header = ({ classNames = [] }: TypeHeaderProps) => {
 
   return (
     <header className={cn(stls.container, getClassNames({ classNames }))}>
-        header
+        <GeneralHeaderTop/>
     </header>
   )
 }
