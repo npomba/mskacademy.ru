@@ -1,12 +1,15 @@
+import { Wrapper } from '@/components/layout'
 import type { NextPage } from 'next'
 
 
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
+      <Wrapper>
         NextPage
-    </div>
+      </Wrapper>
+    </>
   )
 }
 
