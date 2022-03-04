@@ -1,0 +1,26 @@
+// Set theme depended colors
+@mixin dye($prop, $color)
+
+  @if $prop == 'c'
+    &
+      color: $color
+
+  @if $prop == 'bg'
+    &
+      background-color: $color
+
+  @if $prop == 'stroke'
+    &
+      stroke: $color
+
+  @if $prop == 'fill'
+    &
+      fill: $color
+
+  @if $prop == 'border'
+    &
+      border-color: $color
+
+  @if $prop == 'outline'
+    &
+      outline-color: $color
