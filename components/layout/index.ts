@@ -1,5 +1,2 @@
-import Wrapper from '@/components/layout/Wrapper'
 
-export {
-    Wrapper,
-}
+export { default as Wrapper } from '@/components/layout/Wrapper'

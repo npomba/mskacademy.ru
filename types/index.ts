@@ -1,7 +1,3 @@
-import TypeChildren from '@/types/general/TypeChildren'
-import TypeClassNames from '@/types/general/TypeClassNames'
 
-export {
-    TypeChildren,
-    TypeClassNames,
-}
+export type { default as TypeChildren } from 'types/general/TypeChildren'
+export type { default as TypeClassNames } from 'types/general/TypeClassNames'

@@ -1,5 +1,2 @@
-import getClassNames from 'helperts/general/getClassNames'
 
-export {
-    getClassNames,
-}
+export { default as getClassNames } from 'helperts/general/getClassNames'
