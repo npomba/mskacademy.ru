@@ -1,3 +1,5 @@
+import getClassNames from '@/utils/general/getClassNames'
 
-
-export {}
+export {
+    getClassNames,
+}
