@@ -1,3 +1,5 @@
+import Wrapper from '@/components/layout/Wrapper'
 
-
-export {}
+export {
+    Wrapper,
+}

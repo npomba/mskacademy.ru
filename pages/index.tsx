@@ -1,6 +1,6 @@
 import stls from '@/styles/pages/PageHome.module.sass'
 import type { NextPage } from 'next'
-import Wrapper from '@/components/layout/Wrapper'
+import { Wrapper } from '@/components/layout'
 
 
 

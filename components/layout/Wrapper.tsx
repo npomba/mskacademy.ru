@@ -1,14 +1,14 @@
 import stls from '@/styles/components/layout/Wrapper.module.sass'
 import { TypeChildren, TypeClassNames } from '@/types/index'
 import cn from 'classnames'
-import { getClassNames } from '@/utils/index'
+import { getClassNames } from 'helperts/index'
 
 type TypeWrapperProps = TypeClassNames & TypeChildren
 
-const Wrapper = ({ classNames = [], children }: TypeWrapperProps) => {
+const Wrapper = ({ classNames, children }: TypeWrapperProps) => {
   return (
     <div
-      className={cn([stls.container], getClassNames({ classNames }))}>
+      className={cn([stls.container], getClassNames({ classNames })) || undefined }>
       {children}
     </div>
   )
