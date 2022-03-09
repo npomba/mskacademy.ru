@@ -1,2 +1,2 @@
 
-export { default as getClassNames } from 'helpers/general/getClassNames'
+export { default as getClassNames } from '@/helpers/general/getClassNames'
