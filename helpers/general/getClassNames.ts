@@ -1,6 +1,6 @@
 import { TypeClassNames } from '@/types/index'
 
-type TypegetClassNamesProps = TypeClassNames
+type TypeGetClassNamesProps = TypeClassNames
 
 type TypeGetClassNamesOutput = {
   readonly [key: string]: boolean
@@ -8,7 +8,7 @@ type TypeGetClassNamesOutput = {
 
 const getClassNames = ({
   classNames = []
-}: TypegetClassNamesProps): TypeGetClassNamesOutput =>
+}: TypeGetClassNamesProps): TypeGetClassNamesOutput =>
   classNames
     .filter(className => className)
     .reduce((acc, cur) => ({ ...acc, [cur]: true }), {})
