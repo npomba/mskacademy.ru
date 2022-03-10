@@ -1,2 +1,38 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+html, body
+  &::-webkit-scrollbar
+    width: f.px(10)
+  &::-webkit-scrollbar-thumb
+    @include m.dye(bg, c.$chi)
+
+html
+  box-sizing: border-box
+  // font-family: Arimo, sans-serif
+  // // scroll-behavior: smooth
+
 body
   background-color: #000
+
+h1
+  overflow-wrap: break-word
+
+svg
+  width: 100%
+  height: 100%
+
+a, button
+  cursor: pointer
+
+// section
+//   @include m.media(phone, tablet)
+//     padding-bottom: f.px(50)
+//   @include m.media(laptop, desktop)
+//     padding-bottom: f.px(115)
