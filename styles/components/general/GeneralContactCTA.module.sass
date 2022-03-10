@@ -4,10 +4,12 @@
 
 
 .container 
+    display: flex
     @include m.media(phone, tablet)
-        @include m.flex($fd: column)
+        flex-direction: column
     @include m.media(laptop, desktop)
-        @include m.flex($fd: column, $ai: flex-end)
+        flex-direction: column
+        align-items: flex-end
 
 .link 
     margin-bottom: f.px(8)
