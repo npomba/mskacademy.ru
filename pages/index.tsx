@@ -9,8 +9,8 @@ const Home: NextPage = () => {
   return (
     <>
       <IconGeneralLogo />
-      <GeneralContactCTA href={phoneNumber.href} value={phoneNumber.val} lable= {'test phone'}/>
-      <GeneralContactCTA href={email.href} value={email.val} lable= {'test email'}/>
+      <GeneralContactCTA href={phoneNumber.href} value={phoneNumber.val} lable= {'test phone'} variant={'size-m'}/>
+      <GeneralContactCTA href={email.href} value={email.val} lable= {'test email'} variant={'size-xl'}/>
     </>
   )
 }
