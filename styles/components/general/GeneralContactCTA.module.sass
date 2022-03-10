@@ -10,20 +10,18 @@
         @include m.flex($fd: column, $ai: flex-end)
 
 .link 
-    @include m.media(phone, tablet, laptop, desktop)
-        @include m.dye(c, c.$upsilon)
-        margin-bottom: f.px(8)
-        font-weight: 500
-        &.sizeM
-            font-size: f.px(18)
-        &.sizeXL
-            font-size: f.px(25)
+    margin-bottom: f.px(8)
+    font-weight: 500
+    @include m.dye(c, c.$upsilon)
+    &.sizeM
+        font-size: f.px(18)
+    &.sizeXL
+        font-size: f.px(25)
 
 .lable
-    @include m.media(phone, tablet, laptop, desktop)
-        @include m.dye(c, #FB4D3E)
-        font-size: f.px(13)
-        font-weight: 600
+    font-size: f.px(13)
+    font-weight: 600
+    @include m.dye(c, c.$alpha)
 
     
 
