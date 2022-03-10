@@ -1,0 +1,1 @@
+export { default as GeneralContactCTA } from '@/components/general/GeneralContactCTA'
