@@ -1,16 +1,16 @@
-import stls from '@/styles/components/general/GeniralContactCTA.module.sass'
+import stls from '@/styles/components/general/GeneralContactCTA.module.sass'
 import { TypeGeneralClassNames, TypeGeneralEmailLink, TypeGeneralEmailValue, TypeGeneralPhoneLink, TypeGeneralPhoneValue } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 
 
-type TypeGeniralContactCTAProps = TypeGeneralClassNames & {
+type TypeGeneralContactCTAProps = TypeGeneralClassNames & {
     href: TypeGeneralPhoneLink | TypeGeneralEmailLink
     value: TypeGeneralPhoneValue | TypeGeneralEmailValue
     lable: string
 }
 
-const GeniralContactCTA = ({ classNames, href, value, lable }: TypeGeniralContactCTAProps) => {
+const GeneralContactCTA = ({ classNames, href, value, lable }: TypeGeneralContactCTAProps) => {
 
 
     return (
@@ -20,4 +20,4 @@ const GeniralContactCTA = ({ classNames, href, value, lable }: TypeGeniralContac
       )
 }
 
-export default GeniralContactCTA
+export default GeneralContactCTA
