@@ -5,10 +5,8 @@
 
 .container 
     display: flex
-    @include m.media(phone, tablet)
-        flex-direction: column
+    flex-direction: column   
     @include m.media(laptop, desktop)
-        flex-direction: column
         align-items: flex-end
 
 .link 
