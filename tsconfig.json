@@ -7,10 +7,10 @@
       "@/context/*": ["context/*"],
       "@/data/*": ["data/*"],
       "@/helpers/*": ["helpers/*"],
+      "@/lib/*": ["lib/*"],
       "@/public/*": ["public/*"],
       "@/styles/*": ["styles/*"],
-      "@/types/*": ["types/*"],
-      "@/lib/*": ["lib/*"]
+      "@/types/*": ["types/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
