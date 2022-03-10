@@ -1,6 +1,6 @@
-import { TypeClassNames } from '@/types/index'
+import { TypeGeneralClassNames } from '@/types/index'
 
-type TypeGetClassNamesProps = TypeClassNames
+type TypeGetClassNamesProps = TypeGeneralClassNames
 
 type TypeGetClassNamesOutput = {
   readonly [key: string]: boolean

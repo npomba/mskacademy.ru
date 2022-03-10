@@ -1,10 +1,10 @@
 import stls from '@/styles/components/icons/general/IconGeneralLogo.module.sass'
-import { TypeClassNames } from '@/types/index'
+import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 
-type TypeIconGeneralLogoProps = TypeClassNames
+type TypeIconGeneralLogoProps = TypeGeneralClassNames
 
 const IconGeneralLogo = ({ classNames }: TypeIconGeneralLogoProps) => {
   return (

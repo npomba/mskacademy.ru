@@ -1,9 +1,9 @@
 import stls from '@/styles/components/layout/Wrapper.module.sass'
-import { TypeGeneralChildren, TypeClassNames } from '@/types/index'
+import { TypeGeneralChildren, TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 
-type TypeWrapperProps = TypeClassNames & TypeGeneralChildren
+type TypeWrapperProps = TypeGeneralClassNames & TypeGeneralChildren
 
 const Wrapper = ({ classNames, children }: TypeWrapperProps) => {
   return (
