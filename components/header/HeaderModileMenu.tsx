@@ -1,11 +1,11 @@
-import stls from '@/styles/components/general/GeneralHeaderModileMenu.module.sass'
+import stls from '@/styles/components/general/HeaderModileMenu.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 
-type TypeGeneralHeaderModileMenuProps = TypeGeneralClassNames
+type TypeHeaderModileMenuProps = TypeGeneralClassNames
 
-const GeneralHeaderModileMenu = ({ classNames }: TypeGeneralHeaderModileMenuProps) => {
+const HeaderModileMenu = ({ classNames }: TypeHeaderModileMenuProps) => {
 
 
     return (
@@ -15,4 +15,4 @@ const GeneralHeaderModileMenu = ({ classNames }: TypeGeneralHeaderModileMenuProp
       )
 }
 
-export default GeneralHeaderModileMenu
+export default HeaderModileMenu

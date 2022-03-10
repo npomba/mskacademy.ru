@@ -2,7 +2,7 @@ import stls from '@/styles/components/layout/Header.module.sass'
 import { TypeClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
-import { HeaderTop, HeaderMenu, HeaderModileMenu } from '@/components/general'
+import { HeaderTop, HeaderMenu, HeaderModileMenu } from '@/components/header'
 
 
 
