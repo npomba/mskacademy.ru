@@ -1,6 +1,8 @@
+import { TypeGeniralPhoneValue, TypeGeniralPhoneLink} from "@/types/index"
+
 type TypePhoneNumber = {
-    href: `tel:+${string}`
-    val: `+${string}`
+    href: TypeGeniralPhoneLink
+    val: TypeGeniralPhoneValue
   }
   
   const phoneNumber: TypePhoneNumber = {

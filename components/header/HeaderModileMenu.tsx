@@ -1,4 +1,4 @@
-import stls from '@/styles/components/general/HeaderModileMenu.module.sass'
+import stls from '@/styles/components/header/HeaderModileMenu.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
