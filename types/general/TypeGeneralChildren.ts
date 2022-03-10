@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-type TypeChildren = {
+type TypeGeneralChildren = {
   readonly children: ReactNode
 }
 
-export default TypeChildren
+export default TypeGeneralChildren
