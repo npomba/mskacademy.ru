@@ -1,1 +1,1 @@
-export { default as GeniralContactCTA } from '@/components/general/GeniralContactCTA'
+export { default as GeneralContactCTA } from '@/components/general/GeneralContactCTA'
