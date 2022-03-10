@@ -1,4 +1,4 @@
-type TypeColorsKeys =
+type TypeGeneralColorsKeys =
   | 'alpha'
   | 'beta'
   | 'gamma'
@@ -24,4 +24,4 @@ type TypeColorsKeys =
   | 'psi'
   | 'omega'
 
-export default TypeColorsKeys
+export default TypeGeneralColorsKeys

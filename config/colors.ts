@@ -1,8 +1,8 @@
 import colors from '@/styles/themes/default/Colors.module.sass'
-import { TypeColorsKeys, TypeColor } from '@/types/index'
+import { TypeGeneralColorsKeys, TypeColor } from '@/types/index'
 
 type TypeColors = {
-  [key in TypeColorsKeys]: TypeColor
+  [key in TypeGeneralColorsKeys]: TypeColor
 }
 
 export default colors as TypeColors
