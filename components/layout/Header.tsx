@@ -1,5 +1,5 @@
 import stls from '@/styles/components/layout/Header.module.sass'
-import { TypeClassNames } from '@/types/index'
+import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { HeaderTop, HeaderMenu, HeaderModileMenu } from '@/components/header'
@@ -7,7 +7,7 @@ import { HeaderTop, HeaderMenu, HeaderModileMenu } from '@/components/header'
 
 
 
-type TypeHeaderProps = TypeClassNames
+type TypeHeaderProps = TypeGeneralClassNames
 
 const Header = ({ classNames }: TypeHeaderProps) => {
  
@@ -16,8 +16,8 @@ const Header = ({ classNames }: TypeHeaderProps) => {
   return (
     <header className={cn(stls.container, getClassNames({ classNames })) || undefined }>
         <HeaderTop/>
-        <HeaderMenu/>
-        <HeaderModileMenu/>
+        {/* <HeaderMenu/>
+        <HeaderModileMenu/> */}
     </header>
   )
 }

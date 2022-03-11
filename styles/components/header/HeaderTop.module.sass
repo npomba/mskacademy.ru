@@ -1,3 +1,80 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+    
+    background: #26252C //Test
+
+.wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include m.media(phone, tablet)
+        padding-top: f.px(56) 
+        padding-bottom: f.px(56) 
+    @include m.media(laptop, desktop)
+        padding-top: f.px(20) 
+        padding-bottom: f.px(20) 
+
+.logos 
+    display: flex
+    align-items: center
+
+.iconRABO
+    max-width: f.px(114)
+    @include m.media(phone, tablet)
+        display: none
+    @include m.media(laptop)
+        margin: 0 f.px(30) 0 f.px(30)
+    @include m.media(desktop)
+        margin: 0 f.px(94) 0 f.px(136)
+
+.iconGMDE
+    @include m.media(phone, tablet)
+        display: none
+
+.contacts
+    @include m.media(phone, tablet)
+        display: none
+
+.burger
+    position: relative
+    width: f.px(36)
+    cursor: pointer
+    @include m.media(laptop, desktop)
+        display: none
+    span
+        display: block
+        position: absolute
+        left: 0
+        width: f.px(36)
+        height: f.px(2)
+        @include m.dye(bg, c.$alpha)
+    &::before, &::after 
+        content: ""
+        position: absolute
+        left: 0
+        width: f.px(36)
+        height: f.px(2)
+        @include m.dye(bg, c.$alpha)
+        transition: all 0.2s 
+    &::before 
+        top: f.px(12)
+    &::after 
+        top: f.px(24)
+    
+    &.active 
+        span 
+            display: none
+        &::before, &::after 
+            transition: all 0.2s 
+            @include m.dye(bg, c.$psi)
+        &::before 
+            top: f.px(12)
+            transform: rotate(45deg)
+        &::after
+            top: f.px(12)
+            transform: rotate(-45deg)
+      
+    
