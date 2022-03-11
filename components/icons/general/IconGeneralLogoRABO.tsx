@@ -4,9 +4,9 @@ import cn from 'classnames'
 import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 
-type TypeIconGeneralLogoRABOrops = TypeGeneralClassNames
+type TypeIconGeneralLogoRABOProps = TypeGeneralClassNames
 
-const IconGeneralLogoRABO = ({ classNames }: TypeIconGeneralLogoRABOrops) => {
+const IconGeneralLogoRABO = ({ classNames }: TypeIconGeneralLogoRABOProps) => {
     return (
         <div
             className={cn(stls.container, getClassNames({ classNames })) || undefined}

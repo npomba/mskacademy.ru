@@ -6,4 +6,4 @@ export type { default as TypeGeneralEmailLink } from '@/types/general/TypeGenera
 export type { default as TypeGeneralEmailValue } from '@/types/general/TypeGeneralEmailValue'
 export type { default as TypeGeneralPhoneLink } from '@/types/general/TypeGeneralPhoneLink'
 export type { default as TypeGeneralPhoneValue } from '@/types/general/TypeGeneralPhoneValue'
-
+export type { default as TypeGeneralImg } from '@/types/general/TypeGeneralImg'
