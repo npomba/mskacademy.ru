@@ -40,7 +40,7 @@ class MyDocument extends Document {
           <meta name='mobile-web-app-capable' content='yes' />
           {/* <meta
         name='msapplication-config'
-        content='/assets/imgs/icons/browserconfig.xml'
+        content='/assets/images/icons/browserconfig.xml'
       /> */}
           <meta name='msapplication-TileColor' content={themeColor} />
           <meta name='msapplication-tap-highlight' content='no' />

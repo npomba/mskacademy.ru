@@ -9,7 +9,7 @@ const MetaOg = () => {
       <meta property='og:url' content='https://yourdomain.com' />
       <meta
         property='og:image'
-        content='https://yourdomain.com/assets/assets/imgs/icons/apple-touch-icon.png'
+        content='https://yourdomain.com/assets/assets/images/icons/apple-touch-icon.png'
       /> */}
     </>
   )

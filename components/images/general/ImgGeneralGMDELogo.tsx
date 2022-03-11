@@ -1,7 +1,7 @@
-import stls from '@/styles/components/imgs/ImgGeneralGMDELogo.module.sass'
+import stls from '@/styles/components/images/ImgGeneralGMDELogo.module.sass'
 import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
 import { ImgTemplate } from '@/components/images'
-import src from '@/public/assets/imgs/general/ImgGeneralGMDELogo.png'
+import src from '@/public/assets/images/general/ImgGeneralGMDELogo.png'
 
 type TypeImgGeneralGMDELogoProps = TypeGeneralClassNames & TypeGeneralImg
 

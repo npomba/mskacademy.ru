@@ -7,7 +7,7 @@ const MetaTwitter = () => {
       <meta name='twitter:description' content='Best PWA App in the world' />
       <meta
         name='twitter:image'
-        content='https://yourdomain.com/assets/assets/imgs/icons/android-chrome-192x192.png'
+        content='https://yourdomain.com/assets/assets/images/icons/android-chrome-192x192.png'
       />
       <meta name='twitter:creator' content='@DavidWShadow' /> */}
     </>
