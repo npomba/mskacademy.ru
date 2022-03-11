@@ -10,7 +10,7 @@ const HeaderModileMenu = ({ classNames }: TypeHeaderModileMenuProps) => {
 
     return (
         <div className={cn(stls.container, getClassNames({ classNames })) || undefined }>
-            HeaderModileMenu
+           
         </div>
       )
 }
