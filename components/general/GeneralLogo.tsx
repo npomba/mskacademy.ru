@@ -11,7 +11,7 @@ const GeneralLogo = ({ classNames }: TypeGeneralLogoProps) => {
 
     return (
         <div className={cn(stls.container, getClassNames({ classNames })) || undefined }>
-           <IconGeneralLogo classNames={[stls.logo]}/>
+           <IconGeneralLogo classNames={[stls.icon]}/>
            <p className={stls.text}>
                Столичная Бизнес Академия
            </p>
