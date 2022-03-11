@@ -1,0 +1,19 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container 
+    display: flex
+    align-items: flex-end
+
+.logo
+    width: f.px(47)
+    height: f.px(76)
+
+.text
+    width: 9ch
+    margin: 0 0 0 f.px(13)
+    font-size: f.px(18)
+    font-weight: 600
+    line-height: f.px(17)
+    @include m.dye(c, c.$psi)
