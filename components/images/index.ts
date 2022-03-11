@@ -1,2 +1,2 @@
 export { default as ImgTemplate } from '@/components/images/ImgTemplate'
-export { default as ImgGeneralMoscowDepartmentOfEducation } from '@/components/images/general/ImgGeneralMoscowDepartmentOfEducation'
+export { default as ImgGeneralGMDELogo } from '@/components/images/general/ImgGeneralGMDELogo'

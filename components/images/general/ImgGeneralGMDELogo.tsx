@@ -1,15 +1,15 @@
-import stls from '@/styles/components/imgs/general/ImgGeneralMoscowDepartmentOfEducation.module.sass'
+import stls from '@/styles/components/imgs/ImgGeneralGMDELogo.module.sass'
 import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
 import { ImgTemplate } from '@/components/images'
 import src from '@/public/assets/imgs/logo.png'
 
-type TypeIconGeneralMoscowDepartmentOfEducationProps = TypeGeneralClassNames & TypeGeneralImg
+type TypeImgGeneralGMDELogoProps = TypeGeneralClassNames & TypeGeneralImg
 
-const ImgGeneralMoscowDepartmentOfEducation = ({
+const ImgGeneralGMDELogo = ({
   classNames,
   width,
   height
-}: TypeIconGeneralMoscowDepartmentOfEducationProps) => {
+}: TypeImgGeneralGMDELogoProps) => {
   return (
     <>
       <ImgTemplate
@@ -23,4 +23,4 @@ const ImgGeneralMoscowDepartmentOfEducation = ({
   )
 }
 
-export default ImgGeneralMoscowDepartmentOfEducation
+export default ImgGeneralGMDELogo
