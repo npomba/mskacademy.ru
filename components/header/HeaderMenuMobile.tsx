@@ -1,18 +1,18 @@
-import stls from '@/styles/components/header/HeaderTop.module.sass'
+import stls from '@/styles/components/header/HeaderMenuMobile.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 
-type TypeHeaderTopProps = TypeGeneralClassNames
+type TypeHeaderMenuMobileProps = TypeGeneralClassNames
 
-const HeaderTop = ({ classNames }: TypeHeaderTopProps) => {
+const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
 
 
     return (
         <div className={cn(stls.container, getClassNames({ classNames })) || undefined }>
-            header top
+           
         </div>
       )
 }
 
-export default HeaderTop
+export default HeaderMenuMobile
