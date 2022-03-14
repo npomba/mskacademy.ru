@@ -6,8 +6,9 @@ import { getClassNames } from '@/helpers/index'
 import { HeaderMenuDesktop, HeaderMenuMobile } from '@/components/header'
 import { Wrapper } from '@/components/layout'
 import { GeneralContactCTA, GeneralLogo } from '@/components/general'
-import { IconGeneralLogoRABO } from '@/components/icons'
-import { ImgGeneralGMDELogo } from '@/components/images'
+import { IconGeneralHamburger } from '@/components/icons'
+import { ImgGeneralGMDELogo, ImgGeneralRABOLogo } from '@/components/images'
+
 import { useState } from 'react'//test
 
 
@@ -22,14 +23,14 @@ const Header = ({ classNames }: TypeHeaderProps) => {
   return (
     <header className={cn(stls.container, getClassNames({ classNames })) || undefined}>
       <Wrapper classNames={[stls.wrapper]}>
-        <GeneralLogo />
+        <GeneralLogo classNames={[stls.iconLogo]}/>
         <div className={stls.logos}>
-          <IconGeneralLogoRABO classNames={[stls.iconRABO]} />
+          <ImgGeneralRABOLogo classNames={[stls.iconRABO]} />
           <ImgGeneralGMDELogo classNames={[stls.iconGMDE]} />
         </div>
         <GeneralContactCTA classNames={[stls.contact]} href={phoneNumber.href} value={phoneNumber.val} lable={'Бесплатно по России'} variant={'size-xl'} />
-        <a className={cn(stls.icon, { [stls.active]: open })} onClick={() => setOpen(!open)}>
-          <span />
+        <a className={stls.icon} onClick={() => setOpen(!open)}>
+          <IconGeneralHamburger/>
         </a>
       </Wrapper>
 

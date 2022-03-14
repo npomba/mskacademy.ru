@@ -4,7 +4,7 @@
 @use 'sass:math'
 
 
-$logos_ml: 9.4%
+$logo_m: 9.4%
 
 
 .container
@@ -19,24 +19,18 @@ $logos_ml: 9.4%
         padding-top: f.px(20) 
         padding-bottom: f.px(20) 
 
+.iconLogo
+    margin-right: $logo_m
+
 .logos 
     display: flex
     align-items: center
+    flex-basis: math.div(36%, 1)
     @include m.media(phone, tablet)
         display: none
-    @include m.media(laptop)
-        margin-left: math.div($logos_ml, 2)
-    @include m.media(desktop)
-        margin-left: math.div($logos_ml, 1)
-
-.iconRABO
-    max-width: f.px(114)
 
 .iconGMDE
-    @include m.media(laptop)
-        margin-left: f.px(30)
-    @include m.media(desktop)
-        margin-left: f.px(94)
+    margin-left: math.div($logo_m * 2, 1)
    
 .contact
     margin-left: auto
@@ -44,42 +38,9 @@ $logos_ml: 9.4%
         display: none 
 
 .icon
-    position: relative
     width: f.px(36)
     margin-left: auto
     cursor: pointer
     @include m.media(laptop, desktop)
         display: none
-    span
-        display: block
-        position: absolute
-        left: 0
-        width: f.px(36)
-        height: f.px(2)
-        @include m.dye(bg, c.$alpha)
-    &::before, &::after 
-        content: ""
-        position: absolute
-        left: 0
-        width: f.px(36)
-        height: f.px(2)
-        @include m.dye(bg, c.$alpha)
-        transition: all 0.2s 
-    &::before 
-        top: f.px(12)
-    &::after 
-        top: f.px(24)
-    
-    &.active 
-        span 
-            display: none
-        &::before, &::after 
-            transition: all 0.2s 
-            @include m.dye(bg, c.$psi)
-        &::before 
-            top: f.px(12)
-            transform: rotate(45deg)
-        &::after
-            top: f.px(12)
-            transform: rotate(-45deg)
       
