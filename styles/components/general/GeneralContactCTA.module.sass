@@ -2,26 +2,23 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
 
-
 .container 
-    display: flex
-    flex-direction: column   
-    @include m.media(laptop, desktop)
-        align-items: flex-end
+  display: flex
+  flex-direction: column   
+  @include m.media(laptop, desktop)
+    align-items: flex-end
 
-.link 
-    margin-bottom: f.px(8)
-    font-weight: 500
-    @include m.dye(c, c.$psi)
-    &.sizeM
-        font-size: f.px(18)
-    &.sizeXL
-        font-size: f.px(25)
+.value 
+  font-weight: 500
+  @include m.dye(c, c.$psi)
+  &.sizeM
+    font-size: f.px(18)
+  &.sizeXL
+    font-size: f.px(25)
 
 .lable
-    font-size: f.px(13)
-    font-weight: 600
-    @include m.dye(c, c.$alpha)
-
-    
-
+  margin-top: f.px(8)
+  font-size: f.px(13)
+  font-weight: 600
+  text-align: right
+  @include m.dye(c, c.$alpha)

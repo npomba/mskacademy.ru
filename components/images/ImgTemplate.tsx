@@ -6,7 +6,7 @@ import { base64pixel } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 
 type TypeImgTemplateProps = TypeGeneralClassNames &
-TypeGeneralImg & {
+  TypeGeneralImg & {
     readonly src: StaticImageData | string
     readonly alt: string
     readonly title?: string
@@ -41,12 +41,14 @@ const ImgTemplate = ({
       }
       title={title}>
       <div
-        className={cn({
-          [stls.faded]: faded,
-          [stls.filter]: filter,
-          [stls.filterAlt]: filterAlt,
-          [stls.isHidden]: !faded && !filter && !filterAlt
-        })}></div>
+        className={
+          cn({
+            [stls.faded]: faded,
+            [stls.filter]: filter,
+            [stls.filterAlt]: filterAlt,
+            [stls.isHidden]: !faded && !filter && !filterAlt
+          }) || undefined
+        }></div>
       <Image
         src={src}
         alt={alt}

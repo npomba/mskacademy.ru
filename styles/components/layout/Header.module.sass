@@ -3,29 +3,26 @@
 @use '@/styles/themes/default/Colors.module.sass' as c
 @use 'sass:math'
 
-$iconLogo_m: 12%
-$logos_basis: 36%
-
 .wrapper
   display: flex
   align-items: center
   @include m.media(phone, tablet)
-    padding: f.px(56) 0
+    padding-top: f.px(56)
+    padding-bottom: f.px(56)
   @include m.media(laptop, desktop)
-    padding: f.px(20) 0
-
-.logo
-  margin-right: $iconLogo_m
+    padding-top: f.px(20)
+    padding-bottom: f.px(20)
 
 .partnersLogos 
   display: flex
   align-items: center
   flex-basis: 36%
+  margin-left: 11.4%
   @include m.media(phone, tablet)
     display: none
 
 .logoGMDE
-  margin-left: 24.4%
+  margin-left: 21.8%
 
 .contact
   margin-left: auto
