@@ -22,10 +22,10 @@ const Header = ({ classNames }: TypeHeaderProps) => {
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
       <Wrapper classNames={[stls.wrapper]}>
-        <GeneralLogo classNames={[stls.iconLogo]} />
-        <div className={stls.logos}>
-          <ImgGeneralRABOLogo classNames={[stls.iconRABO]} />
-          <ImgGeneralGMDELogo classNames={[stls.iconGMDE]} />
+        <GeneralLogo classNames={[stls.logo]} />
+        <div className={stls.partnersLogos}>
+          <ImgGeneralRABOLogo classNames={[stls.logoRABO]} />
+          <ImgGeneralGMDELogo classNames={[stls.logoGMDE]} />
         </div>
         <GeneralContactCTA
           classNames={[stls.contact]}
@@ -34,7 +34,7 @@ const Header = ({ classNames }: TypeHeaderProps) => {
           lable={'Бесплатно по России'}
           variant={'size-xl'}
         />
-        <a className={stls.icon} onClick={() => setOpen(!open)}>
+        <a className={stls.btnHamburger} onClick={() => setOpen(!open)}>
           <IconGeneralHamburger />
         </a>
       </Wrapper>
