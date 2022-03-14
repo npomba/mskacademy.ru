@@ -1,14 +1,16 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+@use 'sass:math'
+
+
+$logos_ml: 9.4%
 
 
 .container
-    background: #26252C //Test
 
 .wrapper
     display: flex
-    justify-content: space-between
     align-items: center
     @include m.media(phone, tablet)
         padding-top: f.px(56) 
@@ -22,25 +24,29 @@
     align-items: center
     @include m.media(phone, tablet)
         display: none
+    @include m.media(laptop)
+        margin-left: math.div($logos_ml, 2)
+    @include m.media(desktop)
+        margin-left: math.div($logos_ml, 1)
 
 .iconRABO
     max-width: f.px(114)
-    @include m.media(laptop)
-        margin-right: f.px(30)
-    @include m.media(desktop)
-        margin-right: f.px(94)
 
 .iconGMDE
+    @include m.media(laptop)
+        margin-left: f.px(30)
     @include m.media(desktop)
-        margin-right: f.px(123)
+        margin-left: f.px(94)
    
 .contact
+    margin-left: auto
     @include m.media(phone, tablet)
         display: none 
 
 .icon
     position: relative
     width: f.px(36)
+    margin-left: auto
     cursor: pointer
     @include m.media(laptop, desktop)
         display: none

@@ -3,7 +3,7 @@ import { TypeGeneralClassNames } from '@/types/index'
 import { phoneNumber } from '@/config/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
-import { HeaderMenuDesktop, HeaderModileMenu } from '@/components/header'
+import { HeaderMenuDesktop, HeaderMenuMobile } from '@/components/header'
 import { Wrapper } from '@/components/layout'
 import { GeneralContactCTA, GeneralLogo } from '@/components/general'
 import { IconGeneralLogoRABO } from '@/components/icons'
@@ -34,7 +34,7 @@ const Header = ({ classNames }: TypeHeaderProps) => {
       </Wrapper>
 
       <HeaderMenuDesktop />
-      <HeaderModileMenu />
+      <HeaderMenuMobile />
     </header>
   )
 }
