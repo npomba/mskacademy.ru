@@ -4,10 +4,11 @@
 @use 'sass:math'
 
 
-$logo_m: 9.4%
-
+$iconLogo_m: 12%
+$logos_basis: 36%
 
 .container
+    background: #3f3f3f
 
 .wrapper
     display: flex
@@ -20,17 +21,21 @@ $logo_m: 9.4%
         padding-bottom: f.px(20) 
 
 .iconLogo
-    margin-right: $logo_m
+    margin-right: $iconLogo_m
 
 .logos 
     display: flex
     align-items: center
-    flex-basis: math.div(36%, 1)
+    flex-basis: 36%
     @include m.media(phone, tablet)
         display: none
 
+.iconRABO
+    flex-basis: 29.6%
+
 .iconGMDE
-    margin-left: math.div($logo_m * 2, 1)
+    flex-basis: 45.8%
+    margin-left: 24.4%
    
 .contact
     margin-left: auto
