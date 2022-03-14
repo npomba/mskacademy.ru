@@ -1,12 +1,12 @@
-import stls from '@/styles/components/icons/general/IconGeneralBurger.module.sass'
+import stls from '@/styles/components/icons/general/IconGeneralHamburger.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 
-type TypeIconGeneralBurgerProps = TypeGeneralClassNames
+type TypeIconGeneralHamburgerProps = TypeGeneralClassNames
 
-const IconGeneralBurger = ({ classNames }: TypeIconGeneralBurgerProps) => {
+const IconGeneralHamburger = ({ classNames }: TypeIconGeneralHamburgerProps) => {
     return (
         <div
             className={cn(stls.container, getClassNames({ classNames })) || undefined}
@@ -20,4 +20,4 @@ const IconGeneralBurger = ({ classNames }: TypeIconGeneralBurgerProps) => {
     )
 }
 
-export default IconGeneralBurger
+export default IconGeneralHamburger
