@@ -2,12 +2,6 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
 
-.container 
-  display: flex
-  flex-direction: column   
-  @include m.media(laptop, desktop)
-    align-items: flex-end
-
 .value 
   font-weight: 500
   @include m.dye(c, c.$psi)

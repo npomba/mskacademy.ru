@@ -1,7 +1,7 @@
+@use 'sass:math'
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
-@use 'sass:math'
 
 .wrapper
   display: flex
@@ -14,24 +14,32 @@
     padding-bottom: f.px(20)
 
 .partnersLogos 
-  display: flex
-  align-items: center
-  flex-basis: 36%
-  margin-left: 11.4%
   @include m.media(phone, tablet)
     display: none
+  @include m.media(laptop, desktop)
+    display: flex
+    align-items: center
+  @include m.media(laptop)
+    margin-left: 6%
+  @include m.media(desktop)
+    margin-left: 11.4%
 
 .logoGMDE
-  margin-left: 21.8%
+  @include m.media(laptop)
+    margin-left: 18%
+  @include m.media(desktop)
+    margin-left: 21.8%
 
 .contact
-  margin-left: auto
   @include m.media(phone, tablet)
     display: none
+  @include m.media(laptop, desktop)
+    margin-left: auto
 
 .btnHamburger
-  min-width: f.px(36)
-  margin-left: auto
+  @include m.media(phone, tablet)
+    max-width: f.px(36)
+    margin-left: auto
   @include m.media(laptop, desktop)
     display: none
       
