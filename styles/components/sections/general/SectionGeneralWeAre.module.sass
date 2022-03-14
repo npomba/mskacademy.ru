@@ -1,0 +1,57 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(80)
+    padding-bottom: f.px(80)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(128)
+    padding-bottom: f.px(128)
+  @include m.dye(bg, c.$alpha)
+
+.title
+  max-width: 18ch
+  margin-bottom: f.px(64)
+  font-family: SONGERSemiExpanded
+  @include m.media(phone, tablet)
+    font-size: f.px(30)
+  @include m.media(laptop, desktop)
+    font-size: f.px(48)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$psi)
+
+.testimonials
+  margin: 0
+  padding: 0
+
+.testimonial
+  display: flex
+  flex-direction: column
+  & + .testimonial
+    @include m.media(phone, tablet)
+      margin-top: f.px(40)
+    @include m.media(laptop, desktop)
+      margin-top: f.px(32)
+  padding: f.px(24)
+  border-radius: f.px(24)
+  @include m.dye(bg, c.$psi)
+
+.testimonialTitle
+  margin: 0
+  font-family: SONGERSemiExpanded
+  @include m.media(phone, tablet)
+    font-size: f.px(36)
+  @include m.media(laptop, desktop)
+    font-size: f.px(24)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$alpha)
+
+.testimonialContent
+  margin-top: f.px(16)
+  margin-bottom: 0
+  line-height: 120%
+  @include m.dye(c, c.$chi)
