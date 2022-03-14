@@ -7,6 +7,7 @@
   display: flex
   align-items: center
   @include m.media(phone, tablet)
+    justify-content: space-between
     padding-top: f.px(56)
     padding-bottom: f.px(56)
   @include m.media(laptop, desktop)
@@ -39,7 +40,6 @@
 .btnHamburger
   @include m.media(phone, tablet)
     max-width: f.px(36)
-    margin-left: auto
   @include m.media(laptop, desktop)
     display: none
       
