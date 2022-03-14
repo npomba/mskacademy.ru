@@ -9,28 +9,33 @@ import { GeneralContactCTA, GeneralLogo } from '@/components/general'
 import { IconGeneralHamburger } from '@/components/icons'
 import { ImgGeneralGMDELogo, ImgGeneralRABOLogo } from '@/components/images'
 
-import { useState } from 'react'//test
-
-
-
+import { useState } from 'react' //test
 
 type TypeHeaderProps = TypeGeneralClassNames
 
 const Header = ({ classNames }: TypeHeaderProps) => {
   const [open, setOpen] = useState<boolean>(false) //Test
 
-
   return (
-    <header className={cn(stls.container, getClassNames({ classNames })) || undefined}>
+    <header
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
       <Wrapper classNames={[stls.wrapper]}>
-        <GeneralLogo classNames={[stls.iconLogo]}/>
+        <GeneralLogo classNames={[stls.iconLogo]} />
         <div className={stls.logos}>
           <ImgGeneralRABOLogo classNames={[stls.iconRABO]} />
           <ImgGeneralGMDELogo classNames={[stls.iconGMDE]} />
         </div>
-        <GeneralContactCTA classNames={[stls.contact]} href={phoneNumber.href} value={phoneNumber.val} lable={'Бесплатно по России'} variant={'size-xl'} />
+        <GeneralContactCTA
+          classNames={[stls.contact]}
+          href={phoneNumber.href}
+          value={phoneNumber.val}
+          lable={'Бесплатно по России'}
+          variant={'size-xl'}
+        />
         <a className={stls.icon} onClick={() => setOpen(!open)}>
-          <IconGeneralHamburger/>
+          <IconGeneralHamburger />
         </a>
       </Wrapper>
 
