@@ -1,8 +1,9 @@
 import stls from '@/styles/components/general/GeneralCopyright.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
+import { companyName } from '@/config/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
-import { companyName } from '@/config/index'
+
 
 
 
