@@ -17,15 +17,13 @@ const HeaderMenuDesktop = ({ classNames }: TypeHeaderMenuDesktopProps) => {
       <Wrapper classNames={[stls.wrapper]}>
         <ul className={stls.list}>
           {
-            dataGeneralMenuLinks.map((item, idx) => {
-              return (
-                <li className={stls.item} key={idx}>
-                  <Link href={item.href}>
-                    <a className={stls.link}>{item.title}</a>
-                  </Link>
-                </li>
-              )
-            })
+            dataGeneralMenuLinks.map((item, idx) => (
+              <li className={stls.item} key={idx}>
+                <Link href={item.href}>
+                  <a className={stls.link}>{item.title}</a>
+                </Link>
+              </li>
+            ))
           }
         </ul>
       </Wrapper>
