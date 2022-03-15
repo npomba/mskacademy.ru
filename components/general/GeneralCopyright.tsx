@@ -2,6 +2,7 @@ import stls from '@/styles/components/general/GeneralCopyright.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
+import { companyName } from '@/config/index'
 
 
 
@@ -11,7 +12,7 @@ const GeneralCopyright = ({ classNames }: TypeGeneralCopyrightProps) => {
 
     return (
         <div className={cn(stls.container, getClassNames({ classNames })) || undefined}>
-            <p className={stls.text}>© Столичная Бизнес Академия, 2021</p>
+            <p className={stls.text}>&copy; {companyName}, {new Date().getFullYear()}</p>
         </div>
     )
 }
