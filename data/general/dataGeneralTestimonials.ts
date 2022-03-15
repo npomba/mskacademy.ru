@@ -16,3 +16,5 @@ const dataGeneralTestimonials = [
     content: 'Студентов уже прошли обучение'
   }
 ]
+
+export default dataGeneralTestimonials
