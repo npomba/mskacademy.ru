@@ -14,5 +14,6 @@
   margin-top: f.px(8)
   font-size: f.px(13)
   font-weight: 600
-  text-align: right
   @include m.dye(c, c.$alpha)
+  @include m.media(laptop, desktop)
+    text-align: right

@@ -4,3 +4,56 @@
 
 
 
+.container
+    @include m.media(phone, tablet)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        @include m.dye(bg, c.$phi)
+        z-index: 100
+    @include m.media(laptop, desktop)
+        display: none
+
+.wrapper
+    display: flex
+    flex-direction: column
+    padding-top: f.px(56)
+    padding-bottom: f.px(80)
+    height: 100vh
+
+.top
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.iconCross
+    max-width: f.px(48)
+
+.list
+    margin: 0
+    padding: f.px(40) 0
+    list-style: none
+
+.item
+    padding: f.px(40) 0
+
+.link
+    font-size: f.px(24)
+    font-weight: 500
+    text-transform: uppercase
+    opacity: .5
+    @include m.dye(c, c.$psi)
+
+.contscts
+    margin-top: auto
+
+.contact
+    display: block
+    margin-bottom: f.px(32)
+
+.copyright
+    padding-top: f.px(16)
+
+   
+
