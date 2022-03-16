@@ -6,7 +6,7 @@
 
 .container
     @include m.media(phone, tablet)
-        position: absolute
+        position: fixed
         top: 0
         left: 0
         width: 100%
@@ -16,8 +16,6 @@
         display: none
 
 .wrapper
-    display: flex
-    flex-direction: column
     padding-top: f.px(56)
     padding-bottom: f.px(80)
     height: 100vh
@@ -33,7 +31,8 @@
 .list
     margin: 0
     padding: f.px(40) 0
-    list-style: none
+    display: flex
+    flex-direction: column
 
 .item
     padding: f.px(40) 0
@@ -44,9 +43,6 @@
     text-transform: uppercase
     opacity: .5
     @include m.dye(c, c.$psi)
-
-.contscts
-    margin-top: auto
 
 .contact
     display: block

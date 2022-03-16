@@ -1,7 +1,7 @@
 import stls from '@/styles/components/header/HeaderMenuMobile.module.sass'
 import Link from 'next/link'
-import { TypeGeneralClassNames } from '@/types/index'
 import { email, phoneNumber } from '@/config/index'
+import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
@@ -20,8 +20,10 @@ const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
     <div className={cn(stls.container, getClassNames({ classNames })) || undefined}>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.top}>
-          <GeneralLogo classNames={[stls.iconLogo]}/>
-          <IconGeneralCross classNames={[stls.iconCross]}/>
+          <GeneralLogo classNames={[stls.iconLogo]} />
+          <a href="#">
+            <IconGeneralCross classNames={[stls.iconCross]} />
+          </a>
         </div>
         <ul className={stls.list}>
           {
@@ -34,7 +36,7 @@ const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
             ))
           }
         </ul>
-        <div className={stls.contscts}>
+        <div className={stls.contacts}>
           <GeneralContactCTA
             classNames={[stls.contact]}
             href={email.href}
@@ -49,7 +51,7 @@ const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
             lable={'Бесплатно по России'}
             variant={'size-m'}
           />
-          <GeneralCopyright classNames={[stls.copyright]}/>
+          <GeneralCopyright classNames={[stls.copyright]} />
         </div>
       </Wrapper>
     </div>
