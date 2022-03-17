@@ -1,12 +1,12 @@
 import stls from '@/styles/components/header/HeaderMenuMobile.module.sass'
 import Link from 'next/link'
-import { email, phoneNumber } from '@/config/index'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
-import { GeneralContactCTA, GeneralCopyright, GeneralLogo } from '@/components/general'
 import { dataGeneralMenuLinks } from '@/data/index'
+import { email, phoneNumber } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
+import { GeneralContactCTA, GeneralCopyright, GeneralLogo } from '@/components/general'
 import { IconGeneralCross } from '@/components/icons'
 
 
