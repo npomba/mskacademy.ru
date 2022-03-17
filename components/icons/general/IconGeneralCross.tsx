@@ -11,24 +11,24 @@ const IconGeneralCross = ({ classNames }: TypeIconGeneralCrossProps) => {
     <div
       className={cn(stls.container, getClassNames({ classNames })) || undefined}
       aria-hidden={'true'}>
-      <svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'>
-        <path
-          d='M36 12L12 36'
+      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 1L1 25"
           stroke={colors.psi}
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
-        <path
-          d='M12 12L36 36'
+        <path d="M1 1L25 25"
           stroke={colors.psi}
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </svg>
     </div>
   )
 }
+
+
 
 export default IconGeneralCross

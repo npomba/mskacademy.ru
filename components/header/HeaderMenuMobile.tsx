@@ -21,7 +21,7 @@ const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
       <Wrapper>
         <div className={stls.top}>
           <GeneralLogo classNames={[stls.iconLogo]} />
-          <a href="#">
+          <a className={stls.iconLink} href="#">
             <IconGeneralCross classNames={[stls.iconCross]} />
           </a>
         </div>

@@ -15,28 +15,31 @@
         padding-top: f.px(56)
         padding-bottom: f.px(80)
         @include m.dye(bg, c.$phi)
-        @include m.media(laptop, desktop)
-            display: none  
+    @include m.media(laptop, desktop)
+        display: none  
 
 .top
     display: flex
     justify-content: space-between
     align-items: center
 
+.iconLink
+    padding: f.px(12)
+
 .iconCross
-    max-width: f.px(48)
+    max-width: f.px(24)
 
 .list
     display: flex
     flex-direction: column
     margin: 0
-    padding: f.px(40) 0
+    padding: f.px(40) 0 0 0
 
 .item
     padding: f.px(40) 0
-    border-bottom: f.px(1) solid c.$delta
-    &:last-child
-        border-bottom: none
+    & + .item
+        border-top: f.px(1) solid
+        @include m.dye(border, c.$delta)
 
 .link
     font-size: f.px(24)
@@ -46,7 +49,9 @@
 
 .contact
     display: block
-    margin-bottom: f.px(32)
+    margin-top: f.px(40)
+    & + .contact
+        margin-top: f.px(32)
 
 .copyright
     margin-top: f.px(16)
