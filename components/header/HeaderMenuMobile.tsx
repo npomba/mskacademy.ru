@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { email, phoneNumber } from '@/config/index'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
-import { getClassNames } from '@/helpers/index'
-import { Wrapper } from '@/components/layout'
 import { GeneralContactCTA, GeneralCopyright, GeneralLogo } from '@/components/general'
 import { dataGeneralMenuLinks } from '@/data/index'
+import { getClassNames } from '@/helpers/index'
+import { Wrapper } from '@/components/layout'
 import { IconGeneralCross } from '@/components/icons'
 
 
@@ -18,7 +18,7 @@ const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
 
   return (
     <div className={cn(stls.container, getClassNames({ classNames })) || undefined}>
-      <Wrapper classNames={[stls.wrapper]}>
+      <Wrapper>
         <div className={stls.top}>
           <GeneralLogo classNames={[stls.iconLogo]} />
           <a href="#">
