@@ -4,3 +4,57 @@
 
 
 
+.container
+    @include m.media(phone, tablet)
+        position: fixed
+        z-index: 3
+        top: 0
+        left: 0
+        width: 100%
+        min-height: 100vh
+        padding-top: f.px(56)
+        padding-bottom: f.px(80)
+        @include m.dye(bg, c.$phi)
+    @include m.media(laptop, desktop)
+        display: none  
+
+.top
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.iconLink
+    padding: f.px(12)
+
+.iconCross
+    max-width: f.px(24)
+
+.list
+    display: flex
+    flex-direction: column
+    margin: f.px(40) 0 0 0
+    padding: 0
+
+.item
+    padding: f.px(40) 0
+    & + .item
+        border-top: f.px(1) solid
+        @include m.dye(border, c.$delta)
+
+.link
+    font-size: f.px(24)
+    font-weight: 500
+    text-transform: uppercase
+    @include m.dye(c, rgba(c.$psi, .5))
+
+.contact
+    display: block
+    margin-top: f.px(40)
+    & + .contact
+        margin-top: f.px(32)
+
+.copyright
+    margin-top: f.px(16)
+
+   
+
