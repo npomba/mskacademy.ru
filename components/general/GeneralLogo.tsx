@@ -4,19 +4,18 @@ import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { IconGeneralLogo } from '@/components/icons'
 
-
 type TypeGeneralLogoProps = TypeGeneralClassNames
-  
-const GeneralLogo = ({ classNames }: TypeGeneralLogoProps) => {
 
-    return (
-        <div className={cn(stls.container, getClassNames({ classNames })) || undefined }>
-           <IconGeneralLogo classNames={[stls.icon]}/>
-           <p className={stls.text}>
-               Столичная Бизнес Академия
-           </p>
-        </div>
-      )
+const GeneralLogo = ({ classNames }: TypeGeneralLogoProps) => {
+  return (
+    <div
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
+      <IconGeneralLogo classNames={[stls.icon]} />
+      <p className={stls.text}>Столичная Бизнес Академия</p>
+    </div>
+  )
 }
 
 export default GeneralLogo
