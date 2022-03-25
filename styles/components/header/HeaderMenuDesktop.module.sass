@@ -2,27 +2,26 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
 
-
 .container
-    @include m.media(phone, tablet)
-        display: none
+  @include m.media(phone, tablet)
+    display: none
 
 .list
-    display: flex
-    justify-content: center
-    align-items: center
-    padding: 0
-    list-style: none
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0
 
 .item
-    & + .item 
-        margin-left: 10.6%
+  display: flex
+  & + .item 
+    margin-left: 10.6%
 
 .link
-    font-weight: 500
-    text-transform: uppercase
-    transition: color .2s ease-in-out
-    @include m.dye(c, c.$psi)
-    &:hover
-        @include m.dye(c, c.$alpha)
+  font-weight: 500
+  text-transform: uppercase
+  transition: color .2s ease-in-out
+  @include m.dye(c, c.$psi)
+  &:hover
+    @include m.dye(c, c.$alpha)
         

@@ -6,35 +6,36 @@ import { dataGeneralMenuLinks } from '@/data/index'
 import { email, phoneNumber } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
-import { GeneralContactCTA, GeneralCopyright, GeneralLogo } from '@/components/general'
+import {
+  GeneralContactCTA,
+  GeneralCopyright,
+  GeneralLogo
+} from '@/components/general'
 import { IconGeneralCross } from '@/components/icons'
-
-
-
 
 type TypeHeaderMenuMobileProps = TypeGeneralClassNames
 
 const HeaderMenuMobile = ({ classNames }: TypeHeaderMenuMobileProps) => {
-
   return (
-    <div className={cn(stls.container, getClassNames({ classNames })) || undefined}>
+    <div
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
       <Wrapper>
         <div className={stls.top}>
           <GeneralLogo classNames={[stls.iconLogo]} />
-          <a className={stls.iconLink} href="#">
+          <a className={stls.btnClose} href='#'>
             <IconGeneralCross classNames={[stls.iconCross]} />
           </a>
         </div>
         <ul className={stls.list}>
-          {
-            dataGeneralMenuLinks.map((item, idx) => (
-              <li className={stls.item} key={idx}>
-                <Link href={item.href}>
-                  <a className={stls.link}>{item.title}</a>
-                </Link>
-              </li>
-            ))
-          }
+          {dataGeneralMenuLinks.map((item, idx) => (
+            <li className={stls.item} key={idx}>
+              <Link href={item.href}>
+                <a className={stls.link}>{item.title}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
         <div className={stls.contacts}>
           <GeneralContactCTA

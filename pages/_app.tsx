@@ -1,14 +1,18 @@
 import '@/styles/app.sass'
 import type { AppProps } from 'next/app'
-import { Header } from '@/components/layout'
+import { Header, Main, Footer } from '@/components/layout'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Header/>
-      <Component {...pageProps} />
+      {/* TODO: view header to make sure structure & styles are right */}
+      <Header />
+      <Main>
+        <Component {...pageProps} />
+      </Main>
+      <Footer />
     </>
   )
 }
 
-export default MyApp
+export default App
