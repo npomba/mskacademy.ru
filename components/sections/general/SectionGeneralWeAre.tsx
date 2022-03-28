@@ -1,8 +1,6 @@
 import stls from '@/styles/components/sections/general/SectionGeneralWeAre.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
-import cn from 'classnames'
 import { dataGeneralWeAre } from '@/data/index'
-import { getClassNames } from '@/helpers/index'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 import {
