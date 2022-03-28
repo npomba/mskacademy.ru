@@ -8,14 +8,12 @@ type TypeGeneralCopyrightProps = TypeGeneralClassNames
 
 const GeneralCopyright = ({ classNames }: TypeGeneralCopyrightProps) => {
   return (
-    <div
+    <p
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
-      <p className={stls.text}>
-        &copy; {companyName}, {new Date().getFullYear()}
-      </p>
-    </div>
+      &copy; {companyName}, {new Date().getFullYear()}
+    </p>
   )
 }
 
