@@ -3,6 +3,7 @@
 @use '@/styles/themes/default/Colors.module.sass' as c
 
 .container
+  display: none
   @include m.media(phone, tablet)
     position: fixed
     z-index: 3
@@ -13,8 +14,6 @@
     padding-top: f.px(56)
     padding-bottom: f.px(80)
     @include m.dye(bg, c.$phi)
-  @include m.media(laptop, desktop)
-    display: none  
 
 .top
   display: flex

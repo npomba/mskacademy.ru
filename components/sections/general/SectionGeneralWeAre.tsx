@@ -4,6 +4,16 @@ import cn from 'classnames'
 import { dataGeneralWeAre } from '@/data/index'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
+import {
+  ImgWeAreDecoration1,
+  ImgWeAreDecoration2,
+  ImgGeneralECTSLogo,
+  ImgWeAreStudents,
+  ImgWeAreConference,
+  ImgWeAreRoom
+} from '@/components/images'
+
+// TODO: create popups for images & make ECTS interactive & make imgs look good and more responsive (especially on mobile devices)
 
 type TypeSectionGeneralWeAreProps = TypeGeneralClassNames
 
@@ -13,18 +23,34 @@ const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
-      <Wrapper>
-        <h2 className={stls.title}>СТОЛИЧНАЯ БИЗНЕС АКАДЕМИЯ — ЭТО</h2>
+      <Wrapper classNames={[stls.wrapper]}>
+        <ImgWeAreDecoration1 classNames={[stls.ImgWeAreDecoration1]} />
+        <ImgWeAreDecoration2 classNames={[stls.ImgWeAreDecoration2]} />
+        <h2 className={stls.title}>
+          СТОЛИЧНАЯ БИЗНЕС<span className={stls.phoneTablet}>-</span>
+          <span className={stls.laptopDesktop}> </span>АКАДЕМИЯ — ЭТО
+        </h2>
         <div className={stls.content}>
           <ul className={stls.testimonials}>
-            {dataGeneralWeAre.map((item, idx) => (
+            {dataGeneralWeAre.map((item, idx, arr) => (
               <li key={`${item.title}-${idx}`} className={stls.testimonial}>
+                {!arr[idx + 1] && (
+                  <ImgGeneralECTSLogo classNames={[stls.ImgGeneralECTSLogo]} />
+                )}
                 <h3 className={stls.testimonialTitle}>{item.title}</h3>
                 <p className={stls.testimonialContent}>{item.content}</p>
               </li>
             ))}
           </ul>
-          <div className={stls.images}></div>
+          <div className={stls.imgs}>
+            <ImgWeAreStudents classNames={[stls.img, stls.ImgWeAreStudents]} />
+            <div className={stls.smallerImgs}>
+              <ImgWeAreConference
+                classNames={[stls.img, stls.ImgWeAreConference]}
+              />
+              <ImgWeAreRoom classNames={[stls.img, stls.ImgWeAreRoom]} />
+            </div>
+          </div>
         </div>
       </Wrapper>
     </section>

@@ -2,6 +2,8 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
 
+$ld_gap: f.px(32)
+
 .container
   @include m.media(phone, tablet)
     padding-top: f.px(80)
@@ -11,7 +13,32 @@
     padding-bottom: f.px(128)
   @include m.dye(bg, c.$alpha)
 
+.wrapper
+  position: relative
+
+.ImgWeAreDecoration1
+  position: absolute
+  @include m.media(phone, tablet)
+    top: f.px(90)
+    right: 0
+    max-width: f.px(251)
+  @include m.media(laptop, desktop)
+    bottom: f.px(-30)
+    left: f.px(-82)
+
+.ImgWeAreDecoration2
+  position: absolute
+  @include m.media(phone, tablet)
+    bottom: f.px(-50)
+    right: 30%
+    max-width: f.px(74)
+  @include m.media(laptop, desktop)
+    top: f.px(-50)
+    right: 0
+
 .title
+  position: relative
+  z-index: 1
   max-width: 18ch
   margin-bottom: f.px(64)
   font-family: SONGERSemiExpanded
@@ -23,29 +50,47 @@
   line-height: 120%
   @include m.dye(c, c.$psi)
 
+.content
+  position: relative
+  z-index: 1
+  @include m.media(laptop, desktop)
+    display: flex
+
 .testimonials
-  margin: 0
+  margin: 0    
   padding: 0
+  @include m.media(laptop, desktop)
+    flex-basis: 31.6%
+    min-width: f.px(367)
 
 .testimonial
+  position: relative
   display: flex
   flex-direction: column
   & + .testimonial
     @include m.media(phone, tablet)
       margin-top: f.px(40)
     @include m.media(laptop, desktop)
-      margin-top: f.px(32)
+      margin-top: $ld_gap
   padding: f.px(24)
   border-radius: f.px(24)
   @include m.dye(bg, c.$psi)
+
+.ImgGeneralECTSLogo
+  position: absolute
+  top: f.px(8)
+  right: f.px(8)
+  padding: f.px(12)
+  border-radius: f.px(16)
+  @include m.dye(bg, c.$phi)
 
 .testimonialTitle
   margin: 0
   font-family: SONGERSemiExpanded
   @include m.media(phone, tablet)
-    font-size: f.px(36)
-  @include m.media(laptop, desktop)
     font-size: f.px(24)
+  @include m.media(laptop, desktop)
+    font-size: f.px(36)
   font-weight: 500
   line-height: 120%
   @include m.dye(c, c.$alpha)
@@ -55,3 +100,52 @@
   margin-bottom: 0
   line-height: 120%
   @include m.dye(c, c.$chi)
+
+.imgs
+  display: flex
+  align-items: flex-start
+  @include m.media(phone, tablet)
+    margin-top: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-left: $ld_gap
+
+.img
+  overflow: hidden
+  border-radius: f.px(24)
+
+.smallerImgs
+  @include m.media(tablet)
+    display: flex
+  @include m.media(laptop, desktop)
+    margin-left: $ld_gap
+
+.ImgWeAreStudents
+  @include m.media(phone, tablet)
+    max-width: f.px(164)
+  @include m.media(laptop, desktop)
+    max-width: f.px(488)
+
+.ImgWeAreConference
+  @include m.media(phone, tablet)
+    max-width: f.px(164)
+    margin-left: f.px(16)
+  @include m.media(laptop, desktop)
+    max-width: f.px(280)
+
+.ImgWeAreRoom
+  @include m.media(phone)
+    display: none
+  @include m.media(tablet)
+    max-width: f.px(164)
+    margin-left: f.px(16)
+  @include m.media(laptop, desktop)
+    max-width: f.px(280)
+    margin-top: $ld_gap
+
+.phoneTablet
+  @include m.media(laptop, desktop)
+    display: none
+
+.laptopDesktop
+  @include m.media(phone, tablet)
+    display: none

@@ -1,4 +1,4 @@
-import stls from '@/styles/components/images/ImgGeneralGMDELogo.module.sass'
+import stls from '@/styles/components/images/general/ImgGeneralGMDELogo.module.sass'
 import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
 import { ImgTemplate } from '@/components/images'
 import src from '@/public/assets/images/general/ImgGeneralGMDELogo.png'
