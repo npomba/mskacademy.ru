@@ -11,9 +11,11 @@ const IconGeneralHamburger = ({
 }: TypeIconGeneralHamburgerProps) => {
   return (
     <div
-      className={cn(stls.container, getClassNames({ classNames })) || undefined}
-      aria-hidden={'true'}>
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
       <svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <title>Меню</title>
         <path
           d='M6 24H42'
           stroke={colors.alpha}

@@ -9,16 +9,20 @@ type TypeIconGeneralCrossProps = TypeGeneralClassNames
 const IconGeneralCross = ({ classNames }: TypeIconGeneralCrossProps) => {
   return (
     <div
-      className={cn(stls.container, getClassNames({ classNames })) || undefined}
-      aria-hidden={'true'}>
-      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 1L1 25"
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
+      <svg viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <title>Закрыть</title>
+        <path
+          d='M25 1L1 25'
           stroke={colors.psi}
           strokeWidth='2'
           strokeLinecap='round'
           strokeLinejoin='round'
         />
-        <path d="M1 1L25 25"
+        <path
+          d='M1 1L25 25'
           stroke={colors.psi}
           strokeWidth='2'
           strokeLinecap='round'
@@ -28,7 +32,5 @@ const IconGeneralCross = ({ classNames }: TypeIconGeneralCrossProps) => {
     </div>
   )
 }
-
-
 
 export default IconGeneralCross

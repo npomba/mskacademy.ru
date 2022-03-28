@@ -1,7 +1,7 @@
 import stls from '@/styles/components/icons/general/IconGeneralLogo.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
-import { colors } from '@/config/index'
+import { companyName, colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 
 type TypeIconGeneralLogoProps = TypeGeneralClassNames
@@ -9,9 +9,11 @@ type TypeIconGeneralLogoProps = TypeGeneralClassNames
 const IconGeneralLogo = ({ classNames }: TypeIconGeneralLogoProps) => {
   return (
     <div
-      className={cn(stls.container, getClassNames({ classNames })) || undefined}
-      aria-hidden={'true'}>
+      className={
+        cn(stls.container, getClassNames({ classNames })) || undefined
+      }>
       <svg viewBox='0 0 46 75' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <title>{companyName}</title>
         <rect y='42.8656' width='3.84408' height='31.8924' fill={colors.psi} />
         <rect
           x='41.5161'
