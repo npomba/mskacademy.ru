@@ -1,4 +1,7 @@
 export { default as SectionGeneralAccreditations } from '@/components/sections/general/SectionGeneralAccreditations'
 export { default as SectionGeneralCorporateClients } from '@/components/sections/general/SectionGeneralCorporateClients'
+export { default as SectionGeneralCTA } from '@/components/sections/general/SectionGeneralCTA'
 export { default as SectionGeneralDiplomas } from '@/components/sections/general/SectionGeneralDiplomas'
+export { default as SectionGeneralPrograms } from '@/components/sections/general/SectionGeneralPrograms'
+export { default as SectionGeneralStudyFormats } from '@/components/sections/general/SectionGeneralStudyFormats'
 export { default as SectionGeneralWeAre } from '@/components/sections/general/SectionGeneralWeAre'
