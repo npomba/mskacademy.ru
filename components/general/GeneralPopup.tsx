@@ -50,9 +50,9 @@ const GeneralPopup = ({
       }>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.content}>
-          <button className={stls.btnClose} onClick={close}>
+          <a className={stls.btnClose} onClick={close} href='#!'>
             <IconGeneralCross classNames={[stls.icon]} />
-          </button>
+          </a>
           {children}
         </div>
       </Wrapper>
