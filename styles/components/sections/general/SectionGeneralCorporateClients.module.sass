@@ -3,4 +3,7 @@
 @use '@/styles/themes/default/Colors.module.sass' as c
 
 .container
-  display: flex
+  @include m.dye(bg, c.$beta)
+
+.title
+  @include m.dye(c, c.$psi)

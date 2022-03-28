@@ -1,5 +1,6 @@
 import stls from '@/styles/components/images/general/ImgGeneralECTSLogo.module.sass'
 import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
 import { ImgTemplate } from '@/components/images'
 import src from '@/public/assets/images/general/ImgGeneralECTSLogo.png'
 
@@ -13,7 +14,7 @@ const ImgGeneralECTSLogo = ({
   return (
     <>
       <ImgTemplate
-        classNames={classNames}
+        classNames={[cn(stls.container, classNames)]}
         src={src}
         width={width}
         height={height}

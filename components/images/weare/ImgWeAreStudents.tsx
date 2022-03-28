@@ -1,5 +1,6 @@
 import stls from '@/styles/components/images/weare/ImgWeAreStudents.module.sass'
 import { TypeGeneralClassNames, TypeGeneralImg } from '@/types/index'
+import cn from 'classnames'
 import { ImgTemplate } from '@/components/images'
 import src from '@/public/assets/images/weare/ImgWeAreStudents.jpg'
 
@@ -13,7 +14,7 @@ const ImgWeAreStudents = ({
   return (
     <>
       <ImgTemplate
-        classNames={classNames}
+        classNames={[cn(stls.container, classNames)]}
         src={src}
         width={width}
         height={height}

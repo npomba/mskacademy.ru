@@ -1,4 +1,5 @@
 export { default as Footer } from '@/components/layout/Footer'
 export { default as Header } from '@/components/layout/Header'
 export { default as Main } from '@/components/layout/Main'
+export { default as Section } from '@/components/layout/Section'
 export { default as Wrapper } from '@/components/layout/Wrapper'

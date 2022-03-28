@@ -3,7 +3,7 @@ import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
 import { dataGeneralWeAre } from '@/data/index'
 import { getClassNames } from '@/helpers/index'
-import { Wrapper } from '@/components/layout'
+import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 import {
   ImgWeAreDecoration1,
@@ -20,16 +20,13 @@ type TypeSectionGeneralWeAreProps = TypeGeneralClassNames
 
 const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
   return (
-    <section
-      className={
-        cn(stls.container, getClassNames({ classNames })) || undefined
-      }>
+    <Section classNames={[stls.container]}>
       <Wrapper classNames={[stls.wrapper]}>
         <ImgWeAreDecoration1 classNames={[stls.ImgWeAreDecoration1]} />
         <ImgWeAreDecoration2 classNames={[stls.ImgWeAreDecoration2]} />
         <GeneralSectionTitle classNames={[stls.title]}>
-          СТОЛИЧНАЯ БИЗНЕС<span className={stls.phoneTablet}>-</span>
-          <span className={stls.laptopDesktop}> </span>АКАДЕМИЯ — ЭТО
+          Столичная Бизнес<span className={stls.phoneTablet}>-</span>
+          <span className={stls.laptopDesktop}> </span>Академия — это
         </GeneralSectionTitle>
 
         <div className={stls.content}>
@@ -55,7 +52,7 @@ const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
           </div>
         </div>
       </Wrapper>
-    </section>
+    </Section>
   )
 }
 
