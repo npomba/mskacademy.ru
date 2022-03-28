@@ -7,4 +7,26 @@
   @include m.dye(bg, c.$beta)
 
 .title
+  max-width: 11ch
   @include m.dye(c, c.$psi)
+
+.subtitle
+  @include m.dye(c, rgba(c.$psi, .5))
+
+.diplomas
+  display: flex
+  @include m.media(phone, tablet)
+    flex-direction: column
+
+.diploma
+  padding: f.px(16)
+  border-radius: f.px(24)
+  @include m.dye(bg, c.$tau)
+  & > *
+    border-radius: f.px(24)
+
+.ImgDiplomasDiploma2
+  @include m.media(phone, tablet)
+    margin-top: f.px(40)
+  @include m.media(laptop, desktop)
+    margin-left: f.px(32)

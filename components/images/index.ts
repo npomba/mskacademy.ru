@@ -18,6 +18,10 @@ export { default as ImgCorporateClientsSberbankLeasingLogo } from '@/components/
 export { default as ImgCorporateClientsTatenergoLogo } from '@/components/images/corporate-clients/ImgCorporateClientsTatenergoLogo'
 export { default as ImgCorporateClientsTOMCLogo } from '@/components/images/corporate-clients/ImgCorporateClientsTOMCLogo'
 
+// ./diplomas
+export { default as ImgDiplomasDiploma1 } from '@/components/images/diplomas/ImgDiplomasDiploma1'
+export { default as ImgDiplomasDiploma2 } from '@/components/images/diplomas/ImgDiplomasDiploma2'
+
 // ./general
 export { default as ImgGeneralECTSLogo } from '@/components/images/general/ImgGeneralECTSLogo'
 export { default as ImgGeneralGMDELogo } from '@/components/images/general/ImgGeneralGMDELogo'

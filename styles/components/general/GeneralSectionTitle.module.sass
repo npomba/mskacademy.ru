@@ -6,10 +6,12 @@
   &.subtitle
     position: relative
     z-index: 1
+    margin-bottom: f.px(64)
     @include m.media(laptop, desktop)
       display: flex
       justify-content: space-between
     & .title
+      margin-bottom: 0
       @include m.media(phone, tablet)
         margin-bottom: f.px(32)
 
