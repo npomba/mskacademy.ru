@@ -1,3 +1,4 @@
+@use 'sass:math'
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
@@ -7,3 +8,35 @@
 
 .title
   @include m.dye(c, c.$psi)
+
+.clients
+  margin: 0
+  padding: 0
+  display: flex
+  flex-wrap: wrap
+
+$client_mr: 2.6%
+.client
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: f.px(139)
+  @include m.media(phone, tablet)
+    flex-basis: math.div((100% - $client_mr * 1), 2)
+    margin-top: f.px(16)
+    &:nth-child(odd)
+      margin-right: $client_mr
+    &:nth-child(-n+2)
+      margin-top: 0
+  @include m.media(laptop, desktop)
+    flex-basis: math.div((100% - $client_mr * 3), 4)
+    margin-top: f.px(32)
+    margin-right: $client_mr
+    &:nth-child(4n)
+      margin-right: 0
+    &:nth-child(-n+4)
+      margin-top: 0
+  padding: f.px(24)
+  border: 1px solid
+  @include m.dye(border, c.$upsilon)
+  border-radius: f.px(24)
