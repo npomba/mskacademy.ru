@@ -21,29 +21,11 @@
 .wrapper
   position: relative
 
-.heading
-  position: relative
-  z-index: 1
-  @include m.media(laptop, desktop)
-    display: flex
-    justify-content: space-between
-
 .title
   max-width: 13ch
-  @include m.media(phone, tablet)
-    margin-bottom: f.px(32)
   @include m.dye(c, c.$psi)
 
-.p
-  margin: 0
-  @include m.media(phone, tablet)
-    margin-bottom: f.px(64)
-  @include m.media(laptop, desktop)
-    margin-left: f.px(64)
-  max-width: 50ch
-  font-size: f.px(18)
-  font-weight: 500
-  line-height: 120%
+.subtitle
   @include m.dye(c, c.$gamma)
 
 .ImgAccreditationsDecoration1

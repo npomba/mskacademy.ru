@@ -12,7 +12,7 @@ const SectionGeneralDiplomas = ({
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
       <Wrapper>
-        <GeneralSectionTitle classNames={[stls.title]}>
+        <GeneralSectionTitle titleClassNames={[stls.title]}>
           Выдаваемые дипломы
         </GeneralSectionTitle>
       </Wrapper>

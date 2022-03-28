@@ -47,15 +47,14 @@ const SectionGeneralAccreditations = ({
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
       <Wrapper classNames={[stls.wrapper]}>
-        <div className={stls.heading}>
-          <GeneralSectionTitle classNames={[stls.title]}>
-            Аккредитации и лицензии
-          </GeneralSectionTitle>
-          <p className={stls.p}>
-            Академия имеет все необходимые лицензии и аккредитации для
-            качественного обучения специалистов международного уровня
-          </p>
-        </div>
+        <GeneralSectionTitle
+          titleClassNames={[stls.title]}
+          subtitleClassNames={[stls.subtitle]}
+          subtitle={
+            'Академия имеет все необходимые лицензии и аккредитации для качественного обучения специалистов международного уровня'
+          }>
+          Аккредитации и лицензии
+        </GeneralSectionTitle>
         <ImgAccreditationsDecoration1
           classNames={[stls.ImgAccreditationsDecoration1]}
         />

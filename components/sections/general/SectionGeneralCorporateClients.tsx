@@ -57,7 +57,7 @@ const SectionGeneralCorporateClients = ({
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
       <Wrapper>
-        <GeneralSectionTitle classNames={[stls.title]}>
+        <GeneralSectionTitle titleClassNames={[stls.title]}>
           Корпоративные клиенты
         </GeneralSectionTitle>
         <ul className={stls.clients}>

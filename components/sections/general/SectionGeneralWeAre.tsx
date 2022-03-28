@@ -23,7 +23,7 @@ const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
       <Wrapper classNames={[stls.wrapper]}>
         <ImgWeAreDecoration1 classNames={[stls.ImgWeAreDecoration1]} />
         <ImgWeAreDecoration2 classNames={[stls.ImgWeAreDecoration2]} />
-        <GeneralSectionTitle classNames={[stls.title]}>
+        <GeneralSectionTitle titleClassNames={[stls.title]}>
           Столичная Бизнес<span className={stls.phoneTablet}>-</span>
           <span className={stls.laptopDesktop}> </span>Академия — это
         </GeneralSectionTitle>

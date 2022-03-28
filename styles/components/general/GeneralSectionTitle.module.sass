@@ -3,6 +3,17 @@
 @use '@/styles/themes/default/Colors.module.sass' as c
 
 .container
+  &.subtitle
+    position: relative
+    z-index: 1
+    @include m.media(laptop, desktop)
+      display: flex
+      justify-content: space-between
+    & .title
+      @include m.media(phone, tablet)
+        margin-bottom: f.px(32)
+
+.title
   margin-bottom: f.px(64)
   font-family: SONGERSemiExpanded
   @include m.media(phone, tablet)
@@ -12,3 +23,14 @@
   font-weight: 700
   line-height: 120%
   text-transform: uppercase
+
+.p
+  margin: 0
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-left: f.px(64)
+  max-width: 50ch
+  font-size: f.px(18)
+  font-weight: 500
+  line-height: 120%

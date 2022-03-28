@@ -12,7 +12,7 @@ const SectionGeneralStudyFormats = ({
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
       <Wrapper>
-        <GeneralSectionTitle classNames={[stls.title]}>
+        <GeneralSectionTitle titleClassNames={[stls.title]}>
           форматы обучения
         </GeneralSectionTitle>
       </Wrapper>
