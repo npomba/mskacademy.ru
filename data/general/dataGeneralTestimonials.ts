@@ -4,8 +4,8 @@ const dataGeneralTestimonials = [
     content: 'Программ MBA и курсов'
   },
   {
-    title: '2021 год',
-    content: 'Последнее обновление программ в 2021 году'
+    title: '2022 год',
+    content: 'Последнее обновление программ в 2022 году'
   },
   {
     title: '150+',
