@@ -1,0 +1,13 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  margin-bottom: f.px(64)
+  font-family: SONGERSemiExpanded
+  @include m.media(phone)
+    font-size: f.px(30)
+  @include m.media(laptop, desktop)
+    font-size: f.px(48)
+  font-weight: 700
+  line-height: 120%

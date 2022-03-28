@@ -4,6 +4,7 @@ import cn from 'classnames'
 import { dataGeneralWeAre } from '@/data/index'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
+import { GeneralSectionTitle } from '@/components/general'
 import {
   ImgWeAreDecoration1,
   ImgWeAreDecoration2,
@@ -26,10 +27,11 @@ const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
       <Wrapper classNames={[stls.wrapper]}>
         <ImgWeAreDecoration1 classNames={[stls.ImgWeAreDecoration1]} />
         <ImgWeAreDecoration2 classNames={[stls.ImgWeAreDecoration2]} />
-        <h2 className={stls.title}>
+        <GeneralSectionTitle classNames={[stls.title]}>
           СТОЛИЧНАЯ БИЗНЕС<span className={stls.phoneTablet}>-</span>
           <span className={stls.laptopDesktop}> </span>АКАДЕМИЯ — ЭТО
-        </h2>
+        </GeneralSectionTitle>
+
         <div className={stls.content}>
           <ul className={stls.testimonials}>
             {dataGeneralWeAre.map((item, idx, arr) => (
