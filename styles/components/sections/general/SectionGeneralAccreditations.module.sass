@@ -1,0 +1,10 @@
+@use 'sass:math'
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  @include m.dye(bg, c.$alpha)
+
+.title
+  @include m.dye(c, c.$psi)

@@ -18,6 +18,7 @@ const ImgGeneralECTSLogo = ({
         src={src}
         width={width}
         height={height}
+        placeholder='empty'
         alt={'ECTS'}
       />
     </>
