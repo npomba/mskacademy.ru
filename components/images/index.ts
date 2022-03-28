@@ -1,6 +1,13 @@
 // ./
 export { default as ImgTemplate } from '@/components/images/ImgTemplate'
 
+// ./accreditations
+export { default as ImgAccreditationsDecoration1 } from '@/components/images/accreditations/ImgAccreditationsDecoration1'
+export { default as ImgAccreditationsDecoration2 } from '@/components/images/accreditations/ImgAccreditationsDecoration2'
+export { default as ImgAccreditationsECICELLogo } from '@/components/images/accreditations/ImgAccreditationsECICELLogo'
+export { default as ImgAccreditationsRABOLogo } from '@/components/images/accreditations/ImgAccreditationsRABOLogo'
+export { default as ImgAccreditationsRuCoatOfArms } from '@/components/images/accreditations/ImgAccreditationsRuCoatOfArms'
+
 // ./corporate-clients
 export { default as ImgCorporateClientsHHLogo } from '@/components/images/corporate-clients/ImgCorporateClientsHHLogo'
 export { default as ImgCorporateClientsLukomALogo } from '@/components/images/corporate-clients/ImgCorporateClientsLukomALogo'

@@ -8,7 +8,7 @@ type TypeSectionGeneralCTAProps = TypeGeneralClassNames
 const SectionGeneralCTA = ({ classNames }: TypeSectionGeneralCTAProps) => {
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
-      <Wrapper classNames={[stls.wrapper]}>SectionGeneralCTA</Wrapper>
+      <Wrapper>SectionGeneralCTA</Wrapper>
     </Section>
   )
 }

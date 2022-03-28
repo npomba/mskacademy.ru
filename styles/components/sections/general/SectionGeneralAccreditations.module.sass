@@ -3,8 +3,111 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
 
+.ImgAccreditationsRABOLogo
+  @include m.media(desktop)
+    min-width: f.px(144)
+
+.ImgAccreditationsECICELLogo
+  @include m.media(desktop)
+    min-width: f.px(114)
+
+.ImgAccreditationsRuCoatOfArms
+  @include m.media(desktop)
+    min-width: f.px(52)
+
 .container
   @include m.dye(bg, c.$alpha)
 
+.wrapper
+  position: relative
+
+.heading
+  position: relative
+  z-index: 1
+  @include m.media(laptop, desktop)
+    display: flex
+    justify-content: space-between
+
 .title
+  max-width: 13ch
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(32)
   @include m.dye(c, c.$psi)
+
+.p
+  margin: 0
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-left: f.px(64)
+  max-width: 50ch
+  font-size: f.px(18)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$gamma)
+
+.ImgAccreditationsDecoration1
+  position: absolute
+  @include m.media(phone, tablet)
+    max-width: f.px(90)
+    top: f.px(170)
+    right: f.px(20)
+    transform: rotate(-50deg)
+  @include m.media(laptop, desktop)
+    bottom: f.px(-90)
+    right: f.px(120)
+
+.ImgAccreditationsDecoration2
+  position: absolute
+  @include m.media(phone, tablet)
+    top: f.px(-50)
+    left: 0
+    max-width: f.px(71)
+  @include m.media(laptop, desktop)
+    top: f.px(-60)
+    left: f.px(-20)
+
+.list
+  position: relative
+  z-index: 1
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+
+$item_mr: 2.6%
+.item
+  display: flex
+  @include m.media(phone, tablet)
+    flex-direction: column
+    flex-grow: 1
+    & + .item
+      margin-top: f.px(40)
+  @include m.media(laptop, desktop)
+    align-items: center
+    flex-basis: math.div((100% - $item_mr * 1), 2)
+    margin-top: f.px(32)
+    &:nth-child(-n+2)
+      margin-top: 0
+    &:nth-child(odd)
+      margin-right: $item_mr
+    & > *
+      flex-basis: 30%
+  padding: f.px(32)
+  border-radius: f.px(24)
+  @include m.dye(bg, c.$psi)
+
+.itemTitle
+  margin: 0
+  @include m.media(phone, tablet)
+    margin-top: f.px(24)
+  @include m.media(laptop, desktop)
+    flex-basis: 70% - 10.4%
+    max-width: 25ch
+    margin-left: 10.4%
+  font-family: SONGERSemiExpanded
+  font-size: f.px(18)
+  font-weight: 500
+  line-height: 120%
+  text-transform: uppercase
+  @include m.dye(c, c.$beta)
