@@ -14,3 +14,9 @@
   border-top-right-radius: f.px(50)
   @include m.dye(bg, c.$beta)
   @include m.dye(c, c.$psi)
+
+.copyright
+  @include m.media(phone, tablet)
+    padding-top: f.px(80)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(64)
