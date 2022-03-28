@@ -30,9 +30,9 @@ const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
 
         <div className={stls.content}>
           <ul className={stls.testimonials}>
-            {dataGeneralWeAre.map((item, idx, arr) => (
+            {dataGeneralWeAre.map((item, idx) => (
               <li key={`${item.title}-${idx}`} className={stls.testimonial}>
-                {!arr[idx + 1] && (
+                {item.ects && (
                   <ImgGeneralECTSLogo classNames={[stls.ImgGeneralECTSLogo]} />
                 )}
                 <h3 className={stls.testimonialTitle}>{item.title}</h3>
