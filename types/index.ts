@@ -24,6 +24,7 @@ export type { default as TypeGeneralClassNames } from '@/types/general/TypeGener
 export type { default as TypeGeneralClose } from '@/types/general/TypeGeneralClose'
 export type { default as TypeGeneralColor } from '@/types/general/TypeGeneralColor'
 export type { default as TypeGeneralColorsKeys } from '@/types/general/TypeGeneralColorsKeys'
+export type { default as TypeGeneralElementId } from '@/types/general/TypeGeneralElementId'
 export type { default as TypeGeneralEmailLink } from '@/types/general/TypeGeneralEmailLink'
 export type { default as TypeGeneralEmailValue } from '@/types/general/TypeGeneralEmailValue'
 export type { default as TypeGeneralFallback } from '@/types/general/TypeGeneralFallback'
@@ -39,6 +40,7 @@ export type { default as TypeGeneralReferer } from '@/types/general/TypeGeneralR
 export type { default as TypeGeneralRevalidate } from '@/types/general/TypeGeneralRevalidate'
 export type { default as TypeGeneralRoute } from '@/types/general/TypeGeneralRoute'
 export type { default as TypeGeneralRoutesFront } from '@/types/general/TypeGeneralRoutesFront'
+export type { default as TypeGeneralSelectors } from '@/types/general/TypeGeneralSelectors'
 export type { default as TypeGeneralUtms } from '@/types/general/TypeGeneralUtms'
 
 // ./inputs

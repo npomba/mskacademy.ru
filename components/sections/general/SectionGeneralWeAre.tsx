@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/general/SectionGeneralWeAre.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
+import selectors from '@/config/selectors'
 import { dataGeneralWeAre } from '@/data/index'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
@@ -19,7 +20,7 @@ type TypeSectionGeneralWeAreProps = TypeGeneralClassNames
 
 const SectionGeneralWeAre = ({ classNames }: TypeSectionGeneralWeAreProps) => {
   return (
-    <Section classNames={[cn(stls.container, classNames)]}>
+    <Section classNames={[cn(stls.container, classNames)]} id={selectors.about}>
       <Wrapper classNames={[stls.wrapper]}>
         <ImgWeAreDecoration1 classNames={[stls.ImgWeAreDecoration1]} />
         <ImgWeAreDecoration2 classNames={[stls.ImgWeAreDecoration2]} />

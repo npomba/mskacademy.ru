@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/general/SectionGeneralStudyFormats.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
+import selectors from '@/config/selectors'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 
@@ -10,7 +11,9 @@ const SectionGeneralStudyFormats = ({
   classNames
 }: TypeSectionGeneralStudyFormatsProps) => {
   return (
-    <Section classNames={[cn(stls.container, classNames)]}>
+    <Section
+      classNames={[cn(stls.container, classNames)]}
+      id={selectors.studyFormats}>
       <Wrapper>
         <GeneralSectionTitle titleClassNames={[stls.title]}>
           форматы обучения

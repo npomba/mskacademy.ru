@@ -1,9 +1,14 @@
-type TypeSelectors = {
-  readonly main: 'main'
-}
+import { TypeGeneralSelectors } from '@/types/index'
 
-const selectors: TypeSelectors = {
-  main: 'main'
+const selectors: TypeGeneralSelectors = {
+  main: 'main',
+  home: 'home',
+  programs: 'programs',
+  about: 'about',
+  clients: 'clients',
+  studyFormats: 'study-formats',
+  accreditation: 'accreditation',
+  diplomas: 'diplomas'
 }
 
 export default selectors

@@ -8,6 +8,7 @@ import cn from 'classnames'
 import { FieldError } from 'react-hook-form'
 import { getClassNames } from '@/helpers/index'
 import { BtnAlpha } from '@/components/btns'
+import { IconGeneralArrow } from '@/components/icons'
 // TODO: this is basically a copy paste of mitu.msk.ru & need to check it out & make sure it fits
 
 type TypeInputSubmitProps = TypeGeneralClassNames &
@@ -28,8 +29,9 @@ const InputSubmit = ({ classNames, variant, errors }: TypeInputSubmitProps) => {
       <BtnAlpha
         type='submit'
         variant={variant === 'beta' ? 'gamma-reverse' : 'alpha'}
+        classNames={[stls.btn]}
         ariaLabel='Оставить заявку'>
-        Оставить заявку
+        Отправить <IconGeneralArrow classNames={[stls.icon]} />
       </BtnAlpha>
     </div>
   )

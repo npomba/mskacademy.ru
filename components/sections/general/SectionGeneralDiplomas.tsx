@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/general/SectionGeneralDiplomas.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
+import selectors from '@/config/selectors'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 import { ImgDiplomasDiploma1, ImgDiplomasDiploma2 } from '@/components/images'
@@ -13,7 +14,9 @@ const SectionGeneralDiplomas = ({
   classNames
 }: TypeSectionGeneralDiplomasProps) => {
   return (
-    <Section classNames={[cn(stls.container, classNames)]}>
+    <Section
+      classNames={[cn(stls.container, classNames)]}
+      id={selectors.diplomas}>
       <Wrapper>
         <GeneralSectionTitle
           titleClassNames={[stls.title]}

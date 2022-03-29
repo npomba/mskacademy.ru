@@ -2,6 +2,7 @@ import stls from '@/styles/components/sections/general/SectionGeneralHero.module
 import { TypeGeneralClassNames } from '@/types/index'
 import { useContext } from 'react'
 import cn from 'classnames'
+import selectors from '@/config/selectors'
 import { dataGeneralTestimonials } from '@/data/index'
 import { ContextProgramContext } from '@/context/index'
 import { Wrapper, Section } from '@/components/layout'
@@ -13,7 +14,7 @@ type TypeSectionGeneralHeroProps = TypeGeneralClassNames
 const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
   const { program } = useContext(ContextProgramContext)
   return (
-    <Section classNames={[cn(stls.container, classNames)]}>
+    <Section classNames={[cn(stls.container, classNames)]} id={selectors.home}>
       <Wrapper>
         <div className={stls.abovetitle}>КУРС MBA</div>
         <h1 className={stls.title}>

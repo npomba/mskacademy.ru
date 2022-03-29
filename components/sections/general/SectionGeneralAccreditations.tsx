@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/general/SectionGeneralAccreditations.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
+import selectors from '@/config/selectors'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 import {
@@ -45,7 +46,9 @@ const SectionGeneralAccreditations = ({
     }
   ]
   return (
-    <Section classNames={[cn(stls.container, classNames)]}>
+    <Section
+      classNames={[cn(stls.container, classNames)]}
+      id={selectors.accreditation}>
       <Wrapper classNames={[stls.wrapper]}>
         <GeneralSectionTitle
           titleClassNames={[stls.title]}

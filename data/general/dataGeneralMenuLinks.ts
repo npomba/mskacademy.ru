@@ -1,15 +1,23 @@
-const dataGeneralMenuLinks = [
+import { TypeGeneralAnchor } from '@/types/index'
+import { selectors } from '@/config/index'
+
+type TypeDataGeneralMenuLinks = {
+  title: string
+  href: TypeGeneralAnchor
+}[]
+
+const dataGeneralMenuLinks: TypeDataGeneralMenuLinks = [
   {
     title: 'Программы',
-    href: '#'
+    href: `#${selectors.programs}`
   },
   {
     title: 'Об академии',
-    href: '#'
+    href: `#${selectors.about}`
   },
   {
     title: 'Дипломы',
-    href: '#'
+    href: `#${selectors.diplomas}`
   }
 ]
 

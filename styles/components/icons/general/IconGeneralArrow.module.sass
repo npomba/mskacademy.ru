@@ -1,12 +1,7 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+@use '@/styles/shared/general/icon' as icon
 
-.btn
-  display: flex
-  justify-content: center
-  align-items: center
-
-.icon
-  margin-left: 9.6%
-  max-width: f.px(22)
+.container
+  @include icon.container
