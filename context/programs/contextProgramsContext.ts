@@ -4,7 +4,7 @@ import { createContext } from 'react'
 
 const contextProgramsContext = createContext<{
   programs: TypeLibPrograms | null
-  setPrograms: ({ payload }: { payload: TypeLibPrograms | null }) => void
+  setPrograms: ({ payload }: { payload: TypeLibPrograms }) => void
 }>({
   programs: null,
   setPrograms: () => {}

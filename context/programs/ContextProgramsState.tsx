@@ -17,7 +17,7 @@ const ContextProgramsState = ({ children }: TypeContextProgramsStateProps) => {
 
   const [state, dispatch] = useReducer(contextProgramsReducer, initialState)
 
-  const setPrograms = ({ payload }: { payload: TypeLibPrograms | null }) => {
+  const setPrograms = ({ payload }: { payload: TypeLibPrograms }) => {
     dispatch({ type: SET_PROGRAMS, payload })
   }
 

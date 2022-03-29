@@ -26,6 +26,8 @@ export type { default as TypeGeneralColor } from '@/types/general/TypeGeneralCol
 export type { default as TypeGeneralColorsKeys } from '@/types/general/TypeGeneralColorsKeys'
 export type { default as TypeGeneralEmailLink } from '@/types/general/TypeGeneralEmailLink'
 export type { default as TypeGeneralEmailValue } from '@/types/general/TypeGeneralEmailValue'
+export type { default as TypeGeneralFallback } from '@/types/general/TypeGeneralFallback'
+export type { default as TypeGeneralGetStaticPropsContext } from '@/types/general/TypeGeneralGetStaticPropsContext'
 export type { default as TypeGeneralImg } from '@/types/general/TypeGeneralImg'
 export type { default as TypeGeneralLeadClientValues } from '@/types/general/TypeGeneralLeadClientValues'
 export type { default as TypeGeneralNextApiResLeadData } from '@/types/general/TypeGeneralNextApiResLeadData'
@@ -34,7 +36,9 @@ export type { default as TypeGeneralOnClick } from '@/types/general/TypeGeneralO
 export type { default as TypeGeneralPhoneLink } from '@/types/general/TypeGeneralPhoneLink'
 export type { default as TypeGeneralPhoneValue } from '@/types/general/TypeGeneralPhoneValue'
 export type { default as TypeGeneralReferer } from '@/types/general/TypeGeneralReferer'
+export type { default as TypeGeneralRevalidate } from '@/types/general/TypeGeneralRevalidate'
 export type { default as TypeGeneralRoute } from '@/types/general/TypeGeneralRoute'
+export type { default as TypeGeneralRoutesFront } from '@/types/general/TypeGeneralRoutesFront'
 export type { default as TypeGeneralUtms } from '@/types/general/TypeGeneralUtms'
 
 // ./inputs
@@ -45,3 +49,9 @@ export type { default as TypeLibProgram } from '@/types/lib/program/TypeLibProgr
 
 // ./lib/programs
 export type { default as TypeLibPrograms } from '@/types/lib/programs/TypeLibPrograms'
+
+// ./page
+export type { default as TypePageHomeProps } from '@/types/page/TypePageHomeProps'
+export type { default as TypePageHomePropsQuery } from '@/types/page/TypePageHomePropsQuery'
+export type { default as TypePageProgramPaths } from '@/types/page/TypePageProgramPaths'
+export type { default as TypePageProgramPathsQuery } from '@/types/page/TypePageProgramPathsQuery'

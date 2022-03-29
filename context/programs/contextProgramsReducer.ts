@@ -5,7 +5,7 @@ import { SET_PROGRAMS } from '@/context/types'
 type contextProgramsReducerState = TypeContextPrograms
 
 type contextProgramsReducerAction = {
-  payload: TypeLibPrograms | null
+  payload: TypeLibPrograms
   type: typeof SET_PROGRAMS
 }
 
