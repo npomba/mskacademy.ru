@@ -67,7 +67,7 @@ $gap: 2.6%
       margin-right: 0
   padding: 1px
   border-radius: f.px(24)
-  background: linear-gradient(225.49deg, #494852 35.06%, #FB4D3E 100%)
+  background: linear-gradient(225.49deg, c.$upsilon 35.06%, c.$alpha 100%)
 
 .testimonial
   position: relative
@@ -77,7 +77,8 @@ $gap: 2.6%
   flex-grow: 1
   padding: f.px(32)
   border-radius: inherit
-  background: #000
+  @include m.dye(bg, c.$beta)
+  // @include m.dye(bg, c.$phi)
   &::before
     content: ''
     position: absolute
@@ -87,7 +88,7 @@ $gap: 2.6%
     bottom: 0
     left: 0
     border-radius: inherit
-    background: linear-gradient(49.79deg, c.$alpha -12.01%, rgba(61, 59, 72, 0.32) 72.14%)
+    background: linear-gradient(49.79deg, c.$alpha -12.01%, rgba(c.$phi, .32) 72.14%)
 
 .decoration
   margin-bottom: f.px(16)
