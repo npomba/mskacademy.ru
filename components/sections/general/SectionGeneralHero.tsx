@@ -26,7 +26,7 @@ const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
               key={`${testimonial.title}-${idx}`}
               className={stls.testimonialItem}>
               <div className={stls.testimonial}>
-                <ImgGeneralCircleDecoration />
+                <ImgGeneralCircleDecoration classNames={[stls.decoration]} />
                 <h2 className={stls.testimonialTitle}>{testimonial.title}</h2>
                 <p className={stls.testimonialContent}>{testimonial.content}</p>
               </div>

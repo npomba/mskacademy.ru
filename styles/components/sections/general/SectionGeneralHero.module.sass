@@ -47,9 +47,24 @@
   display: flex
   flex-wrap: wrap
 
+$gap: 2.6%
 .testimonialItem
   display: flex
-  flex-basis: 25%
+  @include m.media(phone, tablet)
+    flex-basis: 100%
+    & + .testimonialItem
+      margin-top: f.px(40)
+  @include m.media(laptop)
+    flex-basis: math.div((100% - $gap * 1), 2)
+    &:nth-child(n+3)
+      margin-top: f.px(32)
+    &:nth-child(odd)
+      margin-right: $gap
+  @include m.media(desktop)
+    flex-basis: math.div((100% - $gap * 3), 4)
+    margin-right: $gap
+    &:nth-child(4)
+      margin-right: 0
   padding: 1px
   border-radius: f.px(24)
   background: linear-gradient(225.49deg, #494852 35.06%, #FB4D3E 100%)
@@ -74,8 +89,19 @@
     border-radius: inherit
     background: linear-gradient(49.79deg, c.$alpha -12.01%, rgba(61, 59, 72, 0.32) 72.14%)
 
+.decoration
+  margin-bottom: f.px(16)
+
 .testimonialTitle
+  margin: 0
+  font-family: SONGERSemiExpanded
+  font-size: f.px(36)
+  font-weight: 500
+  line-height: 120%
+  text-transform: uppercase
   @include m.dye(c, c.$psi)
 
 .testimonialContent
+  margin-top: f.px(16)
+  margin-bottom: 0
   @include m.dye(c, rgba(c.$psi, .5))
