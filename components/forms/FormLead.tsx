@@ -136,13 +136,6 @@ const FormLead = ({ classNames, isPopup, variant }: TypeFormLeadProps) => {
             variant={variant}
           />
         </div>
-        <p
-          className={cn(stls.agreement, {
-            [stls.agreementVariantBeta]: variant === 'beta'
-          })}>
-          Отправляя заявку, Вы соглашаетесь с политикой конфиденциальности и
-          условиями обработки персональных данных
-        </p>
       </form>
     </>
   )

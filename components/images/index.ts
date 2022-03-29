@@ -23,6 +23,7 @@ export { default as ImgDiplomasDiploma1 } from '@/components/images/diplomas/Img
 export { default as ImgDiplomasDiploma2 } from '@/components/images/diplomas/ImgDiplomasDiploma2'
 
 // ./general
+export { default as ImgGeneralCircleDecoration } from '@/components/images/general/ImgGeneralCircleDecoration'
 export { default as ImgGeneralECTSLogo } from '@/components/images/general/ImgGeneralECTSLogo'
 export { default as ImgGeneralGMDELogo } from '@/components/images/general/ImgGeneralGMDELogo'
 export { default as ImgGeneralRABOLogo } from '@/components/images/general/ImgGeneralRABOLogo'

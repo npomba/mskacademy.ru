@@ -2,3 +2,80 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  @include m.dye(bg, c.$beta)
+
+.abovetitle
+  margin: 0
+  font-family: SONGERSemiExpanded
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(24)
+    font-size: f.px(24)
+  @include m.media(laptop, desktop)
+    margin-bottom: f.px(32)
+    font-size: f.px(36)
+  font-weight: 500
+  line-height: 120%
+  text-transform: uppercase
+  @include m.dye(c, c.$alpha)
+
+.title
+  margin: 0
+  font-family: SONGERSemiExpanded
+  @include m.media(phone, tablet)
+    font-size: f.px(33)
+  @include m.media(laptop, desktop)
+    font-size: f.px(64)
+  font-weight: 800
+  line-height: 120%
+  text-transform: uppercase
+  @include m.dye(c, c.$psi)
+
+.form
+  @include m.media(phone, tablet)
+    margin-top: f.px(192)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(64)
+
+.testimonials
+  margin: 0
+  margin-top: f.px(80)
+  // @include m.media(phone, tablet)
+  // @include m.media(laptop, desktop)
+  padding: 0
+  display: flex
+  flex-wrap: wrap
+
+.testimonialItem
+  display: flex
+  flex-basis: 25%
+  padding: 1px
+  border-radius: f.px(24)
+  background: linear-gradient(225.49deg, #494852 35.06%, #FB4D3E 100%)
+
+.testimonial
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  padding: f.px(32)
+  border-radius: inherit
+  background: #000
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border-radius: inherit
+    background: linear-gradient(49.79deg, c.$alpha -12.01%, rgba(61, 59, 72, 0.32) 72.14%)
+
+.testimonialTitle
+  @include m.dye(c, c.$psi)
+
+.testimonialContent
+  @include m.dye(c, rgba(c.$psi, .5))
