@@ -17,7 +17,7 @@ const IconGeneralLoader = ({ classNames }: TypeIconGeneralLoaderProps) => {
       <svg
         viewBox='0 0 120 30'
         xmlns='http://www.w3.org/2000/svg'
-        fill={colors.upsilon}>
+        fill={colors.psi}>
         <title>Загрузка...</title>
         <circle cx='15' cy='15' r='15'>
           <animate

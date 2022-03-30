@@ -18,7 +18,8 @@ const GeneralUIForm = ({
   desc,
   explanation,
   explanationXl,
-  variant
+  variant,
+  isPopup
 }: TypeGeneralUIFormProps) => {
   // TODO: add decorations for beta variant
   const Title = h2 ? 'h2' : 'h3'
@@ -45,7 +46,7 @@ const GeneralUIForm = ({
         {explanation && <p className={stls.explanation}>{explanation}</p>}
         {explanationXl && <p className={stls.explanationXl}>{explanationXl}</p>}
       </div>
-      <FormLead classNames={[stls.form]} variant={variant} />
+      <FormLead classNames={[stls.form]} variant={variant} isPopup={isPopup} />
     </div>
   )
 }

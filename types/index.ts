@@ -37,6 +37,7 @@ export type { default as TypeGeneralNextLinkScroll } from '@/types/general/TypeG
 export type { default as TypeGeneralOnClick } from '@/types/general/TypeGeneralOnClick'
 export type { default as TypeGeneralPhoneLink } from '@/types/general/TypeGeneralPhoneLink'
 export type { default as TypeGeneralPhoneValue } from '@/types/general/TypeGeneralPhoneValue'
+export type { default as TypeGeneralRef } from '@/types/general/TypeGeneralRef'
 export type { default as TypeGeneralReferer } from '@/types/general/TypeGeneralReferer'
 export type { default as TypeGeneralRevalidate } from '@/types/general/TypeGeneralRevalidate'
 export type { default as TypeGeneralRoute } from '@/types/general/TypeGeneralRoute'

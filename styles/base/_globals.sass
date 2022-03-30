@@ -31,3 +31,39 @@ svg
 
 a, button
   cursor: pointer
+
+// npm package: reactjs-popup
+@keyframes anvil
+  0%
+    transform: scale(1) translateY(0px)
+    opacity: 0
+  1%
+    transform: scale(0.96) translateY(10px)
+    opacity: 0
+  100%
+    transform: scale(1) translateY(0px)
+    opacity: 1
+
+div.popup-content
+  width: 100%
+  width: max-content
+  max-width: 100%
+  border: none
+  background-color: transparent
+  animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
+
+div.popup-overlay
+  padding-top: f.px(58)
+  padding-bottom: f.px(58)
+  overflow-y: auto
+  background-color: rgba(0,0,0, .5)
+
+#popup-root .GeneralHeaderTop__Popupup-overlay
+  padding-top: 0
+  background-color: rgba(0,0,0, .3)
+  & .GeneralHeaderTop__Popupup-content
+    top: 0
+    left: 0
+    width: 100%
+    margin: 0 !important
+    margin-bottom: auto !important

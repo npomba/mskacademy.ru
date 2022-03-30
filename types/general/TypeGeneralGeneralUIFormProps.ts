@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { TypeFormVariant } from '@/types/index'
+import { TypeFormVariant, TypeFormIsPopup } from '@/types/index'
 
 type TypeGeneralGeneralUIFormProps = {
   title?: ReactNode
@@ -8,6 +8,7 @@ type TypeGeneralGeneralUIFormProps = {
   desc?: ReactNode
   explanation?: ReactNode
   explanationXl?: ReactNode
-} & TypeFormVariant
+} & TypeFormVariant &
+  TypeFormIsPopup
 
 export default TypeGeneralGeneralUIFormProps
