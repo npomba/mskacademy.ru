@@ -1,4 +1,9 @@
 import stls from '@/styles/components/pages/PagesPageHome.module.sass'
+import { NextSeo } from 'next-seo'
+import { useContext } from 'react'
+import truncate from 'truncate'
+import { companyName, routesFront, defaultDescription } from '@/config/index'
+import { ContextProgramContext } from '@/context/index'
 import {
   SectionGeneralHero,
   SectionGeneralPrograms,
@@ -11,8 +16,18 @@ import {
 } from '@/components/sections'
 
 const PagesPageHome = () => {
+  const { program } = useContext(ContextProgramContext)
   return (
     <>
+      <NextSeo
+        title={companyName}
+        description={truncate(
+          program?.whatWillYouLearn?.map(item => item.string).join(', ') ||
+            defaultDescription,
+          120
+        )}
+        canonical={`${routesFront.root}/${program?.slug}`}
+      />
       <SectionGeneralHero />
       <SectionGeneralPrograms />
       <SectionGeneralWeAre />
