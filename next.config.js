@@ -4,7 +4,7 @@ const withPWA = require('next-pwa')
 const { createSecureHeaders } = require('next-secure-headers')
 const dev = process.env.NODE_ENV !== 'production'
 
-const nextConfig = {
+const nextConfig = withPWA({
   reactStrictMode: true,
   poweredByHeader: false,
   i18n: {
@@ -33,6 +33,6 @@ const nextConfig = {
       }
     ]
   }
-}
+})
 
 module.exports = nextConfig
