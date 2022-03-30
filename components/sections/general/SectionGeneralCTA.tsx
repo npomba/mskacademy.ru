@@ -16,7 +16,8 @@ const SectionGeneralCTA = ({
   subtitle,
   desc,
   explanation,
-  explanationXl
+  explanationXl,
+  variant
 }: TypeSectionGeneralCTAProps) => {
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
@@ -28,6 +29,7 @@ const SectionGeneralCTA = ({
           desc={desc}
           explanation={explanation}
           explanationXl={explanationXl}
+          variant={variant}
         />
       </Wrapper>
     </Section>

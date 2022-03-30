@@ -9,10 +9,6 @@
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between)
 
-.inputsVariantBeta
-  @include m.media(laptop, desktop)
-    @include m.flex($d: false, $fd: column)
-
 .input
   @include m.media(tablet)
     @include m.flex($d: false, $fb: 46%)
@@ -22,18 +18,6 @@
   @include m.media(laptop, desktop)
     @include m.flex($d: false, $fb: 23%)
     max-width: 23%
-
-.inputVariantBeta
-  @include m.media(tablet)
-    @include m.flex($d: false, $fb: 45%)
-  @include m.media(laptop, desktop)
-    @include m.flex($d: false, $fb: 100%)
-    min-width: 100%
-    max-width: 100%
-
-.inputSubmitVariantBeta
-  @include m.media(laptop, desktop)
-    margin-top: f.px(40)
 
 .inputEmail
   @include m.media(phone)
@@ -52,6 +36,3 @@
       max-width: 100%
       padding-right: 4.5%
       padding-left: 4.5%
-
-.agreementVariantBeta
-  @include m.dye(c, c.$chi)

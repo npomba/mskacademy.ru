@@ -28,7 +28,7 @@ const InputSubmit = ({ classNames, variant, errors }: TypeInputSubmitProps) => {
       }>
       <BtnAlpha
         type='submit'
-        variant={variant === 'beta' ? 'gamma-reverse' : 'alpha'}
+        variant={variant || 'alpha'}
         classNames={[stls.btn]}
         ariaLabel='Оставить заявку'>
         Отправить <IconGeneralArrow classNames={[stls.icon]} />

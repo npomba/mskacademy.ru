@@ -9,6 +9,8 @@
     padding: f.px(80)
   border-radius: f.px(24)
   @include m.dye(bg, c.$beta)
+  &.variantBeta
+    @include m.dye(bg, c.$alpha)
 
 .top
   @include m.media(laptop, desktop)

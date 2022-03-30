@@ -17,13 +17,17 @@ const GeneralUIForm = ({
   h2,
   desc,
   explanation,
-  explanationXl
+  explanationXl,
+  variant
 }: TypeGeneralUIFormProps) => {
+  // TODO: add decorations for beta variant
   const Title = h2 ? 'h2' : 'h3'
   return (
     <div
       className={
-        cn(stls.container, getClassNames({ classNames })) || undefined
+        cn(stls.container, getClassNames({ classNames }), {
+          [stls.variantBeta]: variant === 'beta'
+        }) || undefined
       }>
       <div className={stls.top}>
         <div
@@ -41,7 +45,7 @@ const GeneralUIForm = ({
         {explanation && <p className={stls.explanation}>{explanation}</p>}
         {explanationXl && <p className={stls.explanationXl}>{explanationXl}</p>}
       </div>
-      <FormLead classNames={[stls.form]} />
+      <FormLead classNames={[stls.form]} variant={variant} />
     </div>
   )
 }

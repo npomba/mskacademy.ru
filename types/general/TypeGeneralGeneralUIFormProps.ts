@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { TypeFormVariant } from '@/types/index'
 
 type TypeGeneralGeneralUIFormProps = {
   title?: ReactNode
@@ -7,6 +8,6 @@ type TypeGeneralGeneralUIFormProps = {
   desc?: ReactNode
   explanation?: ReactNode
   explanationXl?: ReactNode
-}
+} & TypeFormVariant
 
 export default TypeGeneralGeneralUIFormProps
