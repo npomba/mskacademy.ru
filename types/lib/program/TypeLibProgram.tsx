@@ -5,9 +5,11 @@ type TypeLibProgram = {
   duration: {
     minStudyMonths: string | null
   } | null
-  whatWillYouLearn: {
-    string: string | null
-  } | null
+  whatWillYouLearn:
+    | {
+        string: string | null
+      }[]
+    | null
 } | null
 
 export default TypeLibProgram

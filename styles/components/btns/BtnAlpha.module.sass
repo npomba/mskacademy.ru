@@ -34,6 +34,8 @@
 
 .alpha-reverse
   @include btns.reverse($color: c.$alpha)
+  @include m.dye(c, c.$beta)
+  padding: f.px(37) f.px(10)
 
 .beta
   @include btns.regular($color1: c.$beta, $color2: c.$psi)

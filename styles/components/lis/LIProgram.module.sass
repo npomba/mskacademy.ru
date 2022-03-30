@@ -1,0 +1,123 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  display: flex
+  flex-direction: column
+
+.link
+  position: relative
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  padding: f.px(32)
+  border-radius: f.px(24)
+  @include m.dye(bg, c.$sigma)
+
+.icon
+  max-width: f.px(24)
+
+.iconDesktop
+  @include m.media(phone, tablet, laptop)
+    display: none
+  @include m.media(desktop)
+    position: absolute
+    top: 50%
+    right: f.px(36)
+    transform: translateY(-50%)
+
+.iconPhoneTabletLaptop
+  @include m.media(desktop)
+    display: none
+
+.top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 0
+  margin-bottom: f.px(32)
+
+.label
+  margin: 0
+  padding: f.px(16) f.px(24)
+  border-radius: f.px(16)
+  font-size: f.px(13)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(bg, c.$alpha)
+  @include m.dye(c, c.$psi)
+
+.programInfos
+  margin: 0
+  padding: 0
+  display: flex
+  @include m.media(phone, tablet, laptop)
+    flex-direction: column
+  @include m.media(desktop)
+    margin-right: f.px(60)
+
+.programInfo
+  display: flex
+  @include m.media(phone, tablet, laptop)
+    & + .programInfo
+      margin-top: f.px(16)
+      padding-top: f.px(16)
+      border-top: 2px solid
+      @include m.dye(border, c.$omega)
+  @include m.media(desktop)
+    & + .programInfo
+      margin-left: f.px(24)
+      padding-left: f.px(24)
+      border-left: 2px solid
+      @include m.dye(border, c.$omega)
+  line-height: 120%
+  @include m.dye(c, c.$chi)
+
+.title
+  margin: 0
+  @include m.media(phone, tablet)
+    margin-top: f.px(24)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(16)
+  font-size: f.px(18)
+  font-weight: 600
+  line-height: 120%
+  @include m.dye(c, c.$beta)
+
+.content
+  padding-top: f.px(48)
+  padding-left: f.px(32)
+
+.subtitle
+  margin: 0
+  font-weight: 600
+  line-height: 120%
+  @include m.dye(c, c.$alpha)
+
+.whatWillYouLearn
+  margin: 0
+  margin-top: f.px(32)
+  padding: 0
+
+.item
+  position: relative
+  display: flex
+  & + .item
+    margin-top: f.px(16)
+  padding-left: f.px(8 + 4)
+  &::before
+    content: ''
+    position: absolute
+    top: f.px(8)
+    left: 0
+    width: f.px(4)
+    height: f.px(4)
+    border-radius: 50%
+    @include m.dye(bg, c.$alpha)
+
+.p
+  margin: 0
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$beta)

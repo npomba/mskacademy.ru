@@ -15,12 +15,6 @@ const PagesPageHome = () => {
     <>
       <SectionGeneralHero />
       <SectionGeneralPrograms />
-      <SectionGeneralCTA
-        title='Не нашли нужную программу?'
-        subtitle='Наши специалисты помогут!'
-        explanation='Оставьте заявку и наши специалисты Вам помогут подобрать нужную программу, а также ответят 
-        на&nbsp;вопросы, расскажут о возможных вариантах скидок и требованиях к поступлению'
-      />
       <SectionGeneralWeAre />
       <SectionGeneralCorporateClients />
       <SectionGeneralStudyFormats />

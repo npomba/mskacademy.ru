@@ -2,3 +2,89 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+
+.top
+  @include m.media(laptop, desktop)
+    display: flex
+    justify-content: space-between
+
+$heading_ld_fb: 32%
+.heading
+  @include m.media(laptop, desktop)
+    flex-basis: $heading_ld_fb
+
+.title
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(24)
+  @include m.media(laptop, desktop)
+    max-width: 12ch
+    margin-bottom: f.px(32)
+
+.subtitle
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(24)
+  @include m.media(laptop, desktop)
+    font-size: f.px(28)
+  font-weight: 600
+  line-height: 120%
+  @include m.dye(c, c.$alpha)
+
+.content
+  @include m.media(phone, tablet)
+    margin-top: f.px(64)
+  @include m.media(laptop)
+    flex-basis: 100% - $heading_ld_fb - 5%
+    margin-left: 5%
+  @include m.media(desktop)
+    flex-basis: 100% - $heading_ld_fb - 10%
+    margin-left: 10%
+
+.programs
+  margin: 0
+  padding: 0
+
+.program
+  & + .program
+    @include m.media(phone, tablet)
+      margin-top: f.px(60)
+    @include m.media(laptop, desktop)
+      margin-top: f.px(80)
+
+.controlGroup
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.btnShowMore
+  display: flex
+  justify-content: center
+  align-items: center
+  @include m.media(phone, tablet)
+    margin-top: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(80)
+
+.IconGeneralRefresh
+  max-width: f.px(24)
+  margin-right: f.px(8)
+
+.btnShowLess
+  display: flex
+  margin-top: f.px(16)
+  padding-bottom: f.px(4)
+  font-weight: 500
+  line-height: 120%
+  border-bottom: 2px dashed
+  @include m.dye(border, c.$alpha)
+  @include m.dye(c, c.$chi)
+
+.IconPointerTop
+  max-width: f.px(12)
+  margin-left: f.px(14)
+
+.form
+  @include m.media(phone, tablet)
+    margin-top: f.px(80)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(128)

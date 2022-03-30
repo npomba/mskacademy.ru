@@ -2,7 +2,7 @@ import stls from '@/styles/components/sections/general/SectionGeneralHero.module
 import { TypeGeneralClassNames } from '@/types/index'
 import { useContext } from 'react'
 import cn from 'classnames'
-import selectors from '@/config/selectors'
+import { selectors, defaultProgramTitle } from '@/config/index'
 import { dataGeneralTestimonials } from '@/data/index'
 import { ContextProgramContext } from '@/context/index'
 import { Wrapper, Section } from '@/components/layout'
@@ -17,9 +17,7 @@ const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
     <Section classNames={[cn(stls.container, classNames)]} id={selectors.home}>
       <Wrapper>
         <div className={stls.abovetitle}>КУРС MBA</div>
-        <h1 className={stls.title}>
-          {program?.title || 'Управление в гостиничном бизнесе'}
-        </h1>
+        <h1 className={stls.title}>{program?.title || defaultProgramTitle}</h1>
         <FormLead classNames={[stls.form]} />
         <ul className={stls.testimonials}>
           {dataGeneralTestimonials.map((testimonial, idx) => (
