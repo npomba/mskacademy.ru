@@ -1,7 +1,7 @@
 import stls from '@/styles/components/sections/general/SectionGeneralDiplomas.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
-import selectors from '@/config/selectors'
+import { selectors } from '@/config/index'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle } from '@/components/general'
 import { ImgDiplomasDiploma1, ImgDiplomasDiploma2 } from '@/components/images'

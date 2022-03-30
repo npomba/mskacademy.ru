@@ -9,13 +9,9 @@ import { GeneralContactCTA, GeneralLogo } from '@/components/general'
 import { IconGeneralHamburger } from '@/components/icons'
 import { ImgGeneralGMDELogo, ImgGeneralRABOLogo } from '@/components/images'
 
-import { useState } from 'react' //test
-
 type TypeHeaderProps = TypeGeneralClassNames
 
 const Header = ({ classNames }: TypeHeaderProps) => {
-  const [open, setOpen] = useState<boolean>(false) //Test
-
   return (
     <header
       className={
@@ -34,7 +30,7 @@ const Header = ({ classNames }: TypeHeaderProps) => {
           lable={'Бесплатно по России'}
           variant={'size-xl'}
         />
-        <a className={stls.btnHamburger} onClick={() => setOpen(!open)}>
+        <a className={stls.btnHamburger} onClick={() => console.log('click')}>
           <IconGeneralHamburger />
         </a>
       </Wrapper>

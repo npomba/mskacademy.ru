@@ -1,6 +1,7 @@
 import stls from '@/styles/components/general/GeneralLogo.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import cn from 'classnames'
+import { companyName } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import { IconGeneralLogo } from '@/components/icons'
 
@@ -13,7 +14,7 @@ const GeneralLogo = ({ classNames }: TypeGeneralLogoProps) => {
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
       <IconGeneralLogo classNames={[stls.icon]} />
-      <p className={stls.text}>Столичная Бизнес Академия</p>
+      <p className={stls.text}>{companyName}</p>
     </div>
   )
 }

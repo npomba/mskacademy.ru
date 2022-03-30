@@ -4,23 +4,19 @@
 // TODO: this is basically a copy paste of mitu.msk.ru & need to check it out & make sure it fits
 
 @mixin containerVariantBeta
-  & .inputGroup
-    &::after
-      @include m.dye(bg, c.$omega)
-  & .inputGroupError
-    &::after
-      @include m.dye(bg, c.$theta)
   & .input
-    @include m.dye(c, c.$omega)
+    @include m.dye(border, c.$gamma)
+    @include m.dye(bg, c.$epsilon)
+    @include m.dye(c, c.$psi)
     &::placeholder
-      @include m.dye(c, c.$chi)
+      @include m.dye(c, c.$gamma)
     &:focus-visible
-      @include m.dye(border, c.$omega)
+      @include m.dye(border, c.$psi)
   & .inputError
     &:focus-visible
-      @include m.dye(border, c.$theta)
+      @include m.dye(border, c.$psi)
   & .error
-      @include m.dye(c, c.$theta)
+      @include m.dye(c, c.$psi)
 
 @mixin inputGroup
 
@@ -36,7 +32,7 @@
   border-radius: f.px(24)
   font-weight: 600
   line-height: 120%
-  @include m.dye(bg, transparent)
+  @include m.dye(bg, c.$delta)
   @include m.dye(c, c.$psi)
   &::placeholder
     @include m.dye(c, rgba(c.$psi, .2))

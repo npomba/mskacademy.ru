@@ -1,5 +1,6 @@
 export { default as colors } from '@/config/colors'
 export { default as companyName } from '@/config/companyName'
+export { default as defaultProgramTitle } from '@/config/defaultProgramTitle'
 export { default as dev } from '@/config/dev'
 export { default as env } from '@/config/env'
 export { default as fallback } from '@/config/fallback'

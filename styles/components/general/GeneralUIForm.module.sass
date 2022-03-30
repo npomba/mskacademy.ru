@@ -1,0 +1,85 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  @include m.media(phone, tablet)
+    padding: f.px(64) f.px(32)
+  @include m.media(laptop, desktop)
+    padding: f.px(80)
+  border-radius: f.px(24)
+  @include m.dye(bg, c.$beta)
+  &.variantBeta
+    @include m.dye(bg, c.$alpha)
+
+.top
+  @include m.media(laptop, desktop)
+    display: flex
+    justify-content: space-between
+
+$heading_isExplanation_fb: 45%
+$heading_isExplanationXL_fb: 60%
+.heading
+  @include m.media(laptop, desktop)
+    &.isExplanation
+      flex-basis: $heading_isExplanation_fb
+    &.isExplanationXl
+      flex-basis: $heading_isExplanationXL_fb
+  
+.title
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(28)
+  @include m.media(laptop, desktop)
+    font-size: f.px(36)
+  font-weight: 600
+  line-height: 120%
+  @include m.dye(c, c.$psi)
+
+.subtitle
+  margin: 0
+  margin-top: f.px(32)
+  font-size: f.px(24)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$alpha)
+
+.desc
+  margin: 0
+  margin-top: f.px(32)
+  font-size: f.px(18)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$gamma)
+  
+.explanation
+  margin: 0
+  @include m.media(phone, tablet)
+    margin-top: f.px(24)
+    font-size: f.px(16)
+  @include m.media(laptop, desktop)
+    flex-basis: 100% - $heading_isExplanation_fb - 5%
+    max-width: 41ch
+    font-size: f.px(18)
+  line-height: 120%
+  @include m.dye(c, rgba(c.$psi, .5))
+
+.explanationXl
+  margin: 0
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    flex-basis: 100% - $heading_isExplanationXL_fb - 11%
+    margin-left: 5%
+    font-family: SONGERSemiExpanded
+    font-size: f.px(185)
+    font-weight: 700
+    line-height: 120%
+    text-transform: uppercase
+    @include m.dye(c, c.$psi)
+
+.form
+  @include m.media(phone, tablet)
+    margin-top: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(69)

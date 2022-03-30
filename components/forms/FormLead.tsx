@@ -91,48 +91,28 @@ const FormLead = ({ classNames, isPopup, variant }: TypeFormLeadProps) => {
             setThanksIsOpen
           })
         })}>
-        <div
-          className={cn(stls.inputs, {
-            [stls.inputsVariantBeta]: variant === 'beta'
-          })}>
+        <div className={stls.inputs}>
           <InputName
             register={register}
             error={errors.name}
-            classNames={[
-              stls.input,
-              cn({ [stls.inputVariantBeta]: variant === 'beta' })
-            ]}
+            classNames={[stls.input]}
             variant={variant}
           />
           <InputPhone
             register={register}
             error={errors.phone}
-            classNames={[
-              stls.input,
-              cn({ [stls.inputVariantBeta]: variant === 'beta' })
-            ]}
+            classNames={[stls.input]}
             variant={variant}
           />
           <InputEmail
             register={register}
             error={errors.email}
-            classNames={[
-              stls.input,
-              stls.inputEmail,
-              cn({ [stls.inputVariantBeta]: variant === 'beta' })
-            ]}
+            classNames={[stls.input, stls.inputEmail]}
             variant={variant}
           />
           <InputSubmit
             errors={errors}
-            classNames={[
-              stls.input,
-              stls.submit,
-              cn({
-                [stls.inputVariantBeta]: variant === 'beta',
-                [stls.inputSubmitVariantBeta]: variant === 'beta'
-              })
-            ]}
+            classNames={[stls.input, stls.submit]}
             variant={variant}
           />
         </div>

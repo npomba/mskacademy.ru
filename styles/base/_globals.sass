@@ -17,6 +17,10 @@ html
   box-sizing: border-box
   font-family: 'Montserrat', sans-serif
   // // scroll-behavior: smooth
+  @include m.media(phone, tablet, desktop)
+    font-size: 1rem
+  @include m.media(laptop)
+    font-size: .9rem
 
 h1
   overflow-wrap: break-word

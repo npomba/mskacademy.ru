@@ -1,15 +1,37 @@
 import stls from '@/styles/components/sections/general/SectionGeneralCTA.module.sass'
-import { TypeGeneralClassNames } from '@/types/index'
+import {
+  TypeGeneralClassNames,
+  TypeGeneralGeneralUIFormProps
+} from '@/types/index'
 import cn from 'classnames'
-import selectors from '@/config/selectors'
 import { Wrapper, Section } from '@/components/layout'
+import { GeneralUIForm } from '@/components/general'
 
-type TypeSectionGeneralCTAProps = TypeGeneralClassNames
+type TypeSectionGeneralCTAProps = TypeGeneralClassNames &
+  TypeGeneralGeneralUIFormProps
 
-const SectionGeneralCTA = ({ classNames }: TypeSectionGeneralCTAProps) => {
+const SectionGeneralCTA = ({
+  classNames,
+  title,
+  subtitle,
+  desc,
+  explanation,
+  explanationXl,
+  variant
+}: TypeSectionGeneralCTAProps) => {
   return (
     <Section classNames={[cn(stls.container, classNames)]}>
-      <Wrapper>SectionGeneralCTA</Wrapper>
+      <Wrapper>
+        <GeneralUIForm
+          h2
+          title={title}
+          subtitle={subtitle}
+          desc={desc}
+          explanation={explanation}
+          explanationXl={explanationXl}
+          variant={variant}
+        />
+      </Wrapper>
     </Section>
   )
 }
