@@ -1,4 +1,5 @@
 type TypeGeneralSelectors = {
+  readonly gtm: 'google-tag-manager'
   readonly main: 'main'
   readonly home: 'home'
   readonly programs: 'programs'

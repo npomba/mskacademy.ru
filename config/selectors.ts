@@ -1,6 +1,7 @@
 import { TypeGeneralSelectors } from '@/types/index'
 
 const selectors: TypeGeneralSelectors = {
+  gtm: 'google-tag-manager',
   main: 'main',
   home: 'home',
   programs: 'programs',
