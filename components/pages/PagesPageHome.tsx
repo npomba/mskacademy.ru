@@ -20,7 +20,9 @@ const PagesPageHome = () => {
   return (
     <>
       <NextSeo
-        title={companyName}
+        title={`${
+          program?.title ? `${program.title} | ${companyName}` : companyName
+        }`}
         description={truncate(
           program?.whatWillYouLearn?.map(item => item.string).join(', ') ||
             defaultDescription,
