@@ -15,6 +15,7 @@ import {
   SectionGeneralDiplomas
 } from '@/components/sections'
 
+// TODO: add course seo
 const PagesPageHome = () => {
   const { program } = useContext(ContextProgramContext)
   return (
