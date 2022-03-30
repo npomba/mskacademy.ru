@@ -104,7 +104,7 @@
   position: relative
   display: flex
   & + .item
-    margin-top: f.px(16)
+    margin-top: f.px(24)
   padding-left: f.px(8 + 4)
   &::before
     content: ''
@@ -116,8 +116,52 @@
     border-radius: 50%
     @include m.dye(bg, c.$alpha)
 
-.p
+.itemP
   margin: 0
   font-weight: 500
   line-height: 120%
   @include m.dye(c, c.$beta)
+
+.pros
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+  margin-top: f.px(48)
+
+$pro_fb: 45%
+.pro
+  display: flex
+  @include m.media(phone, tablet, laptop)
+    & + .pro
+      margin-top: f.px(24)
+  @include m.media(desktop)
+    flex-basis: 45%
+    &:nth-child(n+3)
+      margin-top: f.px(36)
+    &:nth-child(even)
+      margin-left: 100% - $pro_fb * 2 - 5%
+  padding-left: f.px(24)
+  border-left: 2px solid
+  @include m.dye(border, c.$alpha)
+
+.proP
+  @include m.media(desktop)
+    max-width: 23ch
+  margin: 0
+  font-weight: 600
+  line-height: 120%
+  @include m.dye(c, c.$beta)
+
+.btn
+  display: flex
+  justify-content: center
+  align-items: center
+  @include m.media(phone, tablet)
+    margin-top: f.px(64)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(71)
+
+.IconGeneralArrow
+  margin-left: f.px(16)
+  max-width: f.px(16)

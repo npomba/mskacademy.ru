@@ -5,7 +5,12 @@ import cn from 'classnames'
 import { defaultProgramTitle } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import { ProgramAdmission } from '@/components/program'
-import { IconGeneralPlus, IconGeneralMinus } from '@/components/icons'
+import { BtnAlpha } from '@/components/btns'
+import {
+  IconGeneralPlus,
+  IconGeneralMinus,
+  IconGeneralArrow
+} from '@/components/icons'
 
 type TypeLIProgramProps = TypeGeneralClassNames & {
   program: TypeLibProgram
@@ -29,6 +34,15 @@ const LIProgram = ({ classNames, program, idx }: TypeLIProgramProps) => {
         </>
       )
     }
+  ]
+
+  const pros = [
+    <>
+      Международный диплом установленного образца с присвоением степени&nbsp;MBA
+    </>,
+    <>Последнее обновление программы было в&nbsp;2021&nbsp;г.</>,
+    <>Разработана по&nbsp;международным стандартам</>,
+    <>Спикеры являются практикикующими специалистами</>
   ]
 
   const Icon = ({ desktop }: { desktop?: boolean }) =>
@@ -83,10 +97,21 @@ const LIProgram = ({ classNames, program, idx }: TypeLIProgramProps) => {
               <li
                 key={item.string || `LIProgram__whatWillYouLearn__item-${idx}`}
                 className={stls.item}>
-                <p className={stls.p}>{item.string}</p>
+                <p className={stls.itemP}>{item.string}</p>
               </li>
             ))}
           </ul>
+          <ul className={stls.pros}>
+            {pros.map((pro, idx) => (
+              <li key={`${pro}-${idx}`} className={stls.pro}>
+                <p className={stls.proP}>{pro}</p>
+              </li>
+            ))}
+          </ul>
+          <BtnAlpha variant='beta' classNames={[stls.btn]}>
+            узнать больше о программе{' '}
+            <IconGeneralArrow classNames={[stls.IconGeneralArrow]} />
+          </BtnAlpha>
         </div>
       )}
     </li>
