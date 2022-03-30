@@ -2,3 +2,87 @@
 @use '@/styles/utils/mixins' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/Colors.module.sass' as c
+
+.form
+  margin-top: f.px(64)
+
+.formats
+  margin: 0
+  padding: 0
+  @include m.media(laptop, desktop)
+    display: flex
+
+.format
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: column
+  @include m.media(phone, tablet)
+    & + .format
+      margin-top: f.px(35)
+  @include m.media(laptop, desktop)
+    flex-basis: 50%
+    &:nth-child(odd)
+      margin-right: f.px(32)
+  padding: f.px(16)
+  border-radius: f.px(48)
+  backdrop-filter: blur(2px)
+  @include m.dye(bg, c.$tau)
+  &::after
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    min-width: 100%
+    max-width: 100%
+    min-height: 100%
+    max-height: 100%
+    border-radius: inherit
+    backdrop-filter: blur(2px)
+    @include m.dye(bg, rgba(c.$psi, .4))
+
+.formatBody
+  padding: f.px(48)
+  border-radius: inherit
+
+.formatBody-0
+  @include m.dye(bg, c.$alpha) 
+  & .formatTitle
+    @include m.dye(c, c.$psi) 
+  & .formatP
+    @include m.dye(c, c.$gamma)
+
+.formatBody-1
+  @include m.dye(bg, c.$sigma) 
+  & .formatTitle
+    @include m.dye(c, c.$alpha)
+  & .formatP
+    @include m.dye(c, c.$beta)
+
+.formatTitle
+  margin: 0
+  font-family: SONGERSemiExpanded
+  @include m.media(phone, tablet)
+    font-size: f.px(24)
+  @include m.media(laptop, desktop)
+    font-size: f.px(36)
+  font-weight: 500
+  line-height: 120%
+  text-transform: uppercase
+
+.formatContent
+  @include m.media(phone, tablet)
+    margin-top: f.px(16)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(32)
+
+.formatP
+  margin: 0
+  & + .formatP
+    @include m.media(phone, tablet)
+      margin-top: f.px(16)
+    @include m.media(laptop, desktop)
+      margin-top: f.px(20)
+  font-weight: 500
+  line-height: 120%
