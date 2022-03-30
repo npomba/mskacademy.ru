@@ -1,5 +1,4 @@
-import { routesFront, companyName } from '@/config/index'
-import { dataGeneralTestimonials } from '@/data/index'
+import { routesFront, companyName, defaultDescription } from '@/config/index'
 
 const seo = {
   openGraph: {
@@ -14,9 +13,7 @@ const seo = {
   //   cardType: 'summary_large_image',
   // },
   defaultTitle: companyName,
-  description: dataGeneralTestimonials
-    .map(item => `${item.title} ${item.content.toLowerCase()}`)
-    .join(', '),
+  description: defaultDescription,
   canonical: routesFront.root
   // dangerouslySetAllPagesToNoIndex: true,
   // dangerouslySetAllPagesToNoFollow: true
