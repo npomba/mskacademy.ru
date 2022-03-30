@@ -28,6 +28,7 @@ export type { default as TypeGeneralElementId } from '@/types/general/TypeGenera
 export type { default as TypeGeneralEmailLink } from '@/types/general/TypeGeneralEmailLink'
 export type { default as TypeGeneralEmailValue } from '@/types/general/TypeGeneralEmailValue'
 export type { default as TypeGeneralFallback } from '@/types/general/TypeGeneralFallback'
+export type { default as TypeGeneralGeneralUIFormProps } from '@/types/general/TypeGeneralGeneralUIFormProps'
 export type { default as TypeGeneralGetStaticPropsContext } from '@/types/general/TypeGeneralGetStaticPropsContext'
 export type { default as TypeGeneralImg } from '@/types/general/TypeGeneralImg'
 export type { default as TypeGeneralLeadClientValues } from '@/types/general/TypeGeneralLeadClientValues'

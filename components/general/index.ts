@@ -3,3 +3,4 @@ export { default as GeneralCopyright } from '@/components/general/GeneralCopyrig
 export { default as GeneralLogo } from '@/components/general/GeneralLogo'
 export { default as GeneralPopup } from '@/components/general/GeneralPopup'
 export { default as GeneralSectionTitle } from '@/components/general/GeneralSectionTitle'
+export { default as GeneralUIForm } from '@/components/general/GeneralUIForm'
