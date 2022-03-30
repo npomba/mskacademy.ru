@@ -9,13 +9,13 @@ const MetaIcons = () => {
         color='#5bbad5'
       /> */}
 
-      {/* <link
+      <link
         rel='icon'
         type='image/png'
         sizes='32x32'
-        href='/assets/images/icons/favicon-32x32.png'
+        href='/assets/images/icons/favicon.png'
       />
-      <link
+      {/* <link
         rel='icon'
         type='image/png'
         sizes='16x16'
