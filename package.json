@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "makeicons": "npx pwa-asset-generator ./data/public/assets/images/logos/Logo-2647-2647.png ./data/public/assets/images/icons -p \"0\" -b \"#fff\""
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
@@ -36,6 +38,7 @@
     "@types/uuid": "^8.3.4",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "next-sitemap": "^2.5.15",
     "sass": "^1.49.9",
     "typescript": "4.6.2"
   }
