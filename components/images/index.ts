@@ -28,6 +28,9 @@ export { default as ImgGeneralECTSLogo } from '@/components/images/general/ImgGe
 export { default as ImgGeneralGMDELogo } from '@/components/images/general/ImgGeneralGMDELogo'
 export { default as ImgGeneralRABOLogo } from '@/components/images/general/ImgGeneralRABOLogo'
 
+// ./hero
+export { default as ImgHeroHero } from '@/components/images/hero/ImgHeroHero'
+
 // ./weare
 export { default as ImgWeAreConference } from '@/components/images/weare/ImgWeAreConference'
 export { default as ImgWeAreDecoration1 } from '@/components/images/weare/ImgWeAreDecoration1'

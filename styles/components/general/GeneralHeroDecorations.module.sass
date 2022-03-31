@@ -1,0 +1,138 @@
+@use '@/styles/utils/mixins' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/Colors.module.sass' as c
+
+.container
+  position: relative
+
+.circle
+  position: absolute
+  z-index: 1
+  border-radius: 50%
+  filter: blur(100px)
+
+.circle-1
+  @include m.media(phone, tablet)
+    top: f.px(120)
+    right: f.px(0)
+    min-width: f.px(362)
+    max-width: f.px(362)
+    min-height: f.px(362)
+    max-height: f.px(362) 
+    @include m.dye(bg, rgba(c.$upsilon, .31))
+  @include m.media(laptop, desktop)
+    top: f.px(-100)
+    left: f.px(180)
+    min-width: f.px(773)
+    max-width: f.px(773)
+    min-height: f.px(845)
+    max-height: f.px(845)
+    @include m.dye(bg, c.$beta)
+
+.circle-2
+  @include m.media(phone, tablet)
+    top: 0
+    right: f.px(-60)
+    min-width: f.px(276)
+    max-width: f.px(276)
+    min-height: f.px(276)
+    max-height: f.px(276)
+    background: linear-gradient(0deg, rgba(c.$alpha, .04), rgba(c.$alpha, .04)), rgba(c.$alpha, .04)
+  @include m.media(laptop, desktop)
+    top: f.px(-330)
+    left: f.px(-30)
+    min-width: f.px(536)
+    max-width: f.px(536)
+    min-height: f.px(536)
+    max-height: f.px(536)
+    @include m.dye(bg, c.$beta)
+
+.circle-3
+  @include m.media(phone, tablet)
+    top: f.px(200)
+    right: f.px(-200)
+    min-width: f.px(347)
+    max-width: f.px(347)
+    min-height: f.px(347)
+    max-height: f.px(347)
+    background: linear-gradient(0deg, rgba(c.$alpha, .01), rgba(c.$alpha, .01)), rgba(c.$alpha, .07)
+  @include m.media(laptop, desktop)
+    top: f.px(350)
+    right: 0
+    min-width: f.px(536)
+    max-width: f.px(536)
+    min-height: f.px(536)
+    max-height: f.px(536)
+    @include m.dye(bg, c.$beta)
+
+.circle-4
+  @include m.media(phone, tablet)
+    top: f.px(300)
+    left: f.px(-200)
+    min-width: f.px(465)
+    max-width: f.px(465)
+    min-height: f.px(465)
+    max-height: f.px(465)
+    @include m.dye(bg, c.$beta)
+  @include m.media(laptop, desktop)
+    top: f.px(390)
+    right: f.px(380)
+    min-width: f.px(536)
+    max-width: f.px(536)
+    min-height: f.px(536)
+    max-height: f.px(536)
+    @include m.dye(bg, c.$beta)
+
+.circle-5
+  @include m.media(phone, tablet)
+    top: f.px(300)
+    right: f.px(-200)
+    min-width: f.px(460)
+    max-width: f.px(460)
+    min-height: f.px(460)
+    max-height: f.px(460)
+    @include m.dye(bg, c.$beta)
+  @include m.media(laptop, desktop)
+    top: f.px(250)
+    right: f.px(-40)
+    min-width: f.px(400)
+    max-width: f.px(400)
+    min-height: f.px(400)
+    max-height: f.px(400)
+    background: linear-gradient(0deg, rgba(c.$alpha, 0.04), rgba(c.$alpha, 0.04)), rgba(c.$alpha, 0.04)  
+
+.circle-6
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    top: f.px(220)
+    left: f.px(-10)
+    min-width: f.px(286)
+    max-width: f.px(286)
+    min-height: f.px(286)
+    max-height: f.px(286)
+    background: linear-gradient(0deg, rgba(c.$alpha, 0.04), rgba(c.$alpha, 0.04)), rgba(c.$alpha, 0.04)
+
+.circle-7
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    top: f.px(-140)
+    right: f.px(280)
+    min-width: f.px(319)
+    max-width: f.px(319)
+    min-height: f.px(319)
+    max-height: f.px(319)
+    background: linear-gradient(0deg, rgba(c.$alpha, 0.04), rgba(c.$alpha, 0.04)), rgba(c.$alpha, 0.04)  
+
+.circle-8
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    top: f.px(20)
+    right: f.px(180)
+    min-width: f.px(418)
+    max-width: f.px(418)
+    min-height: f.px(418)
+    max-height: f.px(418)
+    @include m.dye(bg, rgba(c.$upsilon, .31))

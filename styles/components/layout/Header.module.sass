@@ -17,7 +17,13 @@
     padding-top: f.px(20)
     padding-bottom: f.px(20)
 
+.logo
+  position: relative
+  z-index: 2
+
 .partnersLogos 
+  position: relative
+  z-index: 2
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)
@@ -35,12 +41,16 @@
     margin-left: 21.8%
 
 .contact
+  position: relative
+  z-index: 2
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)
     margin-left: auto
 
 .btnHamburger
+  position: relative
+  z-index: 2
   @include m.media(phone, tablet)
     max-width: f.px(36)
   @include m.media(laptop, desktop)
