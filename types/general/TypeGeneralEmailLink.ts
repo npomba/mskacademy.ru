@@ -1,3 +1,3 @@
-type TypeGeneralEmailLink = 'info@mitu.msk.ru'
+type TypeGeneralEmailLink = 'mailto:info@mskacademy.ru'
 
 export default TypeGeneralEmailLink
