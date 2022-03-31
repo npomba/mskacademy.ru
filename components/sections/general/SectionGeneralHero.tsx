@@ -6,8 +6,9 @@ import { selectors, defaultProgramTitle } from '@/config/index'
 import { dataGeneralTestimonials } from '@/data/index'
 import { ContextProgramContext } from '@/context/index'
 import { Wrapper, Section } from '@/components/layout'
+import { GeneralHeroDecorations } from '@/components/general'
 import { FormLead } from '@/components/forms'
-import { ImgGeneralCircleDecoration } from '@/components/images'
+import { ImgGeneralCircleDecoration, ImgHeroHero } from '@/components/images'
 
 type TypeSectionGeneralHeroProps = TypeGeneralClassNames
 
@@ -15,6 +16,7 @@ const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
   const { program } = useContext(ContextProgramContext)
   return (
     <Section classNames={[cn(stls.container, classNames)]} id={selectors.home}>
+      <ImgHeroHero classNames={[stls.img]} />
       <Wrapper>
         <div className={stls.abovetitle}>КУРС MBA</div>
         <h1 className={stls.title}>{program?.title || defaultProgramTitle}</h1>

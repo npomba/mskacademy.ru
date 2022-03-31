@@ -12,6 +12,7 @@ import { routesFront, selectors, gtm, prod } from '@/config/index'
 import { pageview } from '@/helpers/index'
 import { Header, Main, Footer } from '@/components/layout'
 import { ContextProgramsState, ContextProgramState } from '@/context/index'
+import { GeneralHeroDecorations } from '@/components/general'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
   const [loading, setLoading] = useState(false)
@@ -59,11 +60,14 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       /> */}
       <ContextProgramsState>
         <ContextProgramState>
-          <Header />
-          <Main>
-            <Component {...pageProps} />
-          </Main>
-          <Footer />
+          <div className={'page-wrapper'}>
+            <Header />
+            <GeneralHeroDecorations classNames={['decorations']} />
+            <Main>
+              <Component {...pageProps} />
+            </Main>
+            <Footer />
+          </div>
         </ContextProgramState>
       </ContextProgramsState>
       {prod && (

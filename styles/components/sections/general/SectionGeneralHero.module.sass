@@ -4,9 +4,26 @@
 @use '@/styles/themes/default/Colors.module.sass' as c
 
 .container
+  position: relative
   @include m.dye(bg, c.$beta)
 
+.img
+  position: absolute
+  z-index: 0
+  @include m.media(phone, tablet)
+    top: f.px(40)
+    left: f.px(0)
+    min-width: f.px(930)
+    max-width: f.px(930)
+  @include m.media(laptop, desktop)
+    top: f.px(-110)
+    left: f.px(460)
+    min-width: f.px(1083)
+    max-width: f.px(1083)
+
 .abovetitle
+  position: relative
+  z-index: 2
   margin: 0
   font-family: SONGERSemiExpanded
   @include m.media(phone, tablet)
@@ -21,11 +38,14 @@
   @include m.dye(c, c.$alpha)
 
 .title
+  position: relative
+  z-index: 2
   margin: 0
   font-family: SONGERSemiExpanded
   @include m.media(phone, tablet)
     font-size: f.px(33)
   @include m.media(laptop, desktop)
+    max-width: 18ch
     font-size: f.px(64)
   font-weight: 800
   line-height: 120%
@@ -33,12 +53,16 @@
   @include m.dye(c, c.$psi)
 
 .form
+  position: relative
+  z-index: 2
   @include m.media(phone, tablet)
     margin-top: f.px(192)
   @include m.media(laptop, desktop)
     margin-top: f.px(64)
 
 .testimonials
+  position: relative
+  z-index: 2
   margin: 0
   margin-top: f.px(80)
   // @include m.media(phone, tablet)
@@ -71,7 +95,7 @@ $gap: 2.6%
 
 .testimonial
   position: relative
-  z-index: 1
+  z-index: 2
   display: flex
   flex-direction: column
   flex-grow: 1
