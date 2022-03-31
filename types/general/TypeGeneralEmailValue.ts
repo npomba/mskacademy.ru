@@ -1,3 +1,3 @@
-type TypeGeneralEmailValue = 'info@mitu.msk.ru'
+type TypeGeneralEmailValue = 'info@mskacademy.ru'
 
 export default TypeGeneralEmailValue
