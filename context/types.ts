@@ -1,2 +1,3 @@
+export const SET_MENU_IS_OPEN = 'SET_MENU_IS_OPEN'
 export const SET_PROGRAM = 'SET_PROGRAM'
 export const SET_PROGRAMS = 'SET_PROGRAMS'
