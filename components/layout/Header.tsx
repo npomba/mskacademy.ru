@@ -1,8 +1,10 @@
 import stls from '@/styles/components/layout/Header.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
-import { phoneNumber } from '@/config/index'
+import { useContext } from 'react'
 import cn from 'classnames'
+import { phoneNumber } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
+import { ContextMenuContext } from '@/context/index'
 import { HeaderMenuDesktop, HeaderMenuMobile } from '@/components/header'
 import { Wrapper } from '@/components/layout'
 import { GeneralContactCTA, GeneralLogo } from '@/components/general'
@@ -12,6 +14,7 @@ import { ImgGeneralGMDELogo, ImgGeneralRABOLogo } from '@/components/images'
 type TypeHeaderProps = TypeGeneralClassNames
 
 const Header = ({ classNames }: TypeHeaderProps) => {
+  const { setMemuIsOpen } = useContext(ContextMenuContext)
   return (
     <header
       className={
@@ -30,11 +33,13 @@ const Header = ({ classNames }: TypeHeaderProps) => {
           lable={'Бесплатно по России'}
           variant={'size-xl'}
         />
-        <a className={stls.btnHamburger} onClick={() => console.log('click')}>
+        <a
+          href='#!'
+          className={stls.btnHamburger}
+          onClick={() => setMemuIsOpen({ payload: true })}>
           <IconGeneralHamburger />
         </a>
       </Wrapper>
-
       <HeaderMenuDesktop />
       <HeaderMenuMobile />
     </header>

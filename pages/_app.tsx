@@ -11,7 +11,11 @@ import SEO from 'seo.config'
 import { routesFront, selectors, gtm, prod } from '@/config/index'
 import { pageview } from '@/helpers/index'
 import { Header, Main, Footer } from '@/components/layout'
-import { ContextProgramsState, ContextProgramState } from '@/context/index'
+import {
+  ContextProgramsState,
+  ContextProgramState,
+  ContextMenuState
+} from '@/context/index'
 import { GeneralHeroDecorations } from '@/components/general'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
@@ -58,18 +62,20 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         logo={`${routesFront.root}${routesFront.assetsImgsIconsManifestIcon512}`}
         url={routesFront.root}
       /> */}
-      <ContextProgramsState>
-        <ContextProgramState>
-          <div className={'page-wrapper'}>
-            <Header />
-            <GeneralHeroDecorations classNames={['decorations']} />
-            <Main>
-              <Component {...pageProps} />
-            </Main>
-            <Footer />
-          </div>
-        </ContextProgramState>
-      </ContextProgramsState>
+      <ContextMenuState>
+        <ContextProgramsState>
+          <ContextProgramState>
+            <div className={'page-wrapper'}>
+              <Header />
+              <GeneralHeroDecorations classNames={['decorations']} />
+              <Main>
+                <Component {...pageProps} />
+              </Main>
+              <Footer />
+            </div>
+          </ContextProgramState>
+        </ContextProgramsState>
+      </ContextMenuState>
       {prod && (
         <Script
           id={selectors.gtm}
