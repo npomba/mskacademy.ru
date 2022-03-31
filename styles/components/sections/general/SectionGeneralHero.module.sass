@@ -17,9 +17,12 @@
     max-width: f.px(930)
   @include m.media(laptop, desktop)
     top: f.px(-110)
-    left: f.px(460)
     min-width: f.px(1083)
     max-width: f.px(1083)
+  @include m.media(laptop)
+    left: f.px(360)
+  @include m.media(desktop)
+    left: f.px(560)
 
 .abovetitle
   position: relative
