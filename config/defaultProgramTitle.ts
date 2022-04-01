@@ -1,3 +1,3 @@
-const defaultProgramTitle = 'Управление в гостиничном бизнесе'
+const defaultProgramTitle = 'Менеджмент в гостиничном бизнесе'
 
 export default defaultProgramTitle
