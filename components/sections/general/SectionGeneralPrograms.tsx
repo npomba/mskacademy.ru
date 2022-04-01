@@ -2,8 +2,8 @@ import stls from '@/styles/components/sections/general/SectionGeneralPrograms.mo
 import { TypeGeneralClassNames } from '@/types/index'
 import { useContext, useState } from 'react'
 import cn from 'classnames'
-import { selectors } from '@/config/index'
-import { ContextProgramsContext } from '@/context/index'
+import { selectors, defaultProgramTitle } from '@/config/index'
+import { ContextProgramsContext, ContextProgramContext } from '@/context/index'
 import { Wrapper, Section } from '@/components/layout'
 import { GeneralSectionTitle, GeneralUIForm } from '@/components/general'
 import { LIProgram } from '@/components/lis'
@@ -16,6 +16,7 @@ const SectionGeneralPrograms = ({
   classNames
 }: TypeSectionGeneralProgramsProps) => {
   const { programs } = useContext(ContextProgramsContext)
+  const { program: programContext } = useContext(ContextProgramContext)
 
   const isShownCountDefault = 5
   const isShownCountIncrement = 10
@@ -38,6 +39,15 @@ const SectionGeneralPrograms = ({
           <div className={stls.content}>
             <ul className={stls.programs}>
               {programs
+                ?.sort((a, b) =>
+                  a?.title === programContext?.title ||
+                  a?.title === defaultProgramTitle
+                    ? -1
+                    : b?.title === programContext?.title ||
+                      b?.title === defaultProgramTitle
+                    ? 1
+                    : 0
+                )
                 ?.filter((_, idx) => idx < isShownCount)
                 .map((program, idx) => (
                   <LIProgram

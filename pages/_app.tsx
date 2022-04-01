@@ -9,7 +9,7 @@ import 'nprogress/nprogress.css'
 import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from 'seo.config'
 import { routesFront, selectors, gtm, prod } from '@/config/index'
-import { pageview } from '@/helpers/index'
+import { handleUtms, handleReferer, pageview } from '@/helpers/index'
 import { Header, Main, Footer } from '@/components/layout'
 import {
   ContextProgramsState,
@@ -26,10 +26,8 @@ const App = ({ Component, pageProps, router }: AppProps) => {
   }
 
   useEffect(() => {
-    // TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
-
-    // handleUtms({ router })
-    // handleReferer()
+    handleUtms({ router })
+    handleReferer()
 
     NProgress.configure({
       showSpinner: false

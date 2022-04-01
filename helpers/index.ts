@@ -4,6 +4,8 @@ export { default as pageview } from '@/helpers/dataLayer/pageview'
 
 // ./general
 export { default as getClassNames } from '@/helpers/general/getClassNames'
+export { default as handleReferer } from '@/helpers/general/handleReferer'
+export { default as handleUtms } from '@/helpers/general/handleUtms'
 
 // ./lead
 export { default as buildLeadData } from '@/helpers/lead/buildLeadData'
