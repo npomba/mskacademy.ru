@@ -27,6 +27,10 @@ const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
           })}>
           {title}
         </h1>
+        <p className={stls.subtitle}>
+          Оставьте заявку и&nbsp;получите консультацию, а&nbsp;также узнайте
+          о&nbsp;требованиях к&nbsp;поступлению и&nbsp;возможных скидках
+        </p>
         <FormLead classNames={[stls.form]} />
         <ul className={stls.testimonials}>
           {dataGeneralTestimonials.map((testimonial, idx) => (
