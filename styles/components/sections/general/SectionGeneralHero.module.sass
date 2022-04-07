@@ -64,13 +64,29 @@
     @include m.media(laptop, desktop)
       font-size: f.px(52)
 
-.form
+.subtitle
+  margin: 0
   position: relative
   z-index: 2
   @include m.media(phone, tablet)
     margin-top: f.px(192)
+    font-size: f.px(20)
+    line-height: 120%
   @include m.media(laptop, desktop)
+    max-width: 48ch
     margin-top: f.px(64)
+    font-size: f.px(24)
+    line-height: 130%
+  font-weight: 500
+  @include m.dye(c, rgba(c.$psi, .5))
+
+.form
+  position: relative
+  z-index: 2
+  @include m.media(phone, tablet)
+    margin-top: f.px(40)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(48)
 
 .testimonials
   position: relative
