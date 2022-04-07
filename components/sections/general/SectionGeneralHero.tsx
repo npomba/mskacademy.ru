@@ -14,12 +14,19 @@ type TypeSectionGeneralHeroProps = TypeGeneralClassNames
 
 const SectionGeneralHero = ({ classNames }: TypeSectionGeneralHeroProps) => {
   const { program } = useContext(ContextProgramContext)
+
+  const title = program?.title || defaultProgramTitle
   return (
     <Section classNames={[cn(stls.container, classNames)]} id={selectors.home}>
       <ImgHeroHero classNames={[stls.img]} />
       <Wrapper>
         <div className={stls.abovetitle}>КУРС MBA</div>
-        <h1 className={stls.title}>{program?.title || defaultProgramTitle}</h1>
+        <h1
+          className={cn(stls.title, {
+            [stls.defaultProgramTitle]: title === defaultProgramTitle
+          })}>
+          {title}
+        </h1>
         <FormLead classNames={[stls.form]} />
         <ul className={stls.testimonials}>
           {dataGeneralTestimonials.map((testimonial, idx) => (
