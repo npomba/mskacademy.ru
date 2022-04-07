@@ -45,7 +45,9 @@
   z-index: 2
   margin: 0
   font-family: SONGERSemiExpanded
-  @include m.media(phone, tablet)
+  @include m.media(phone)
+    font-size: f.px(28)
+  @include m.media(tablet)
     font-size: f.px(33)
   @include m.media(laptop, desktop)
     max-width: 18ch
@@ -54,6 +56,13 @@
   line-height: 120%
   text-transform: uppercase
   @include m.dye(c, c.$psi)
+  &.defaultProgramTitle
+    @include m.media(phone)
+      font-size: f.px(28)
+    @include m.media(tablet)
+      font-size: f.px(42)
+    @include m.media(laptop, desktop)
+      font-size: f.px(52)
 
 .form
   position: relative
