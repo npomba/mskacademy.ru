@@ -6,8 +6,8 @@ type TypePhoneNumber = {
 }
 
 const phoneNumber: TypePhoneNumber = {
-  href: 'tel:+7-495-149-00-20',
-  val: '+7 (495) 149-00-20'
+  href: 'tel:+7-495-120-02-97',
+  val: '+7 (495) 197-02-20'
 }
 
 export default phoneNumber
