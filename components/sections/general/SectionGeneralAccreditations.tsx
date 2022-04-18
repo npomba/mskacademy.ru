@@ -12,7 +12,7 @@ import {
   ImgAccreditationsRuCoatOfArms
 } from '@/components/images'
 
-// TODO: improve styles so that logo and text go vertical on laptop
+// TODO: improve styles so that logo and text go vertical on laptop 
 
 type TypeSectionGeneralAccreditationsProps = TypeGeneralClassNames
 
