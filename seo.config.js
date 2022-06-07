@@ -3,7 +3,7 @@ import { routesFront, companyName, defaultDescription } from '@/config/index'
 const seo = {
   openGraph: {
     type: 'website',
-    locale: 'ru',
+    locale: 'ru_RU',
     url: routesFront.root,
     site_name: companyName
   },

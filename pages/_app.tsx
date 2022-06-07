@@ -8,7 +8,13 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from 'seo.config'
-import { routesFront, selectors, gtm, prod } from '@/config/index'
+import {
+  routesFront,
+  selectors,
+  gtm,
+  prod,
+  sessionStorageKeys
+} from '@/config/index'
 import { handleUtms, handleReferer, pageview } from '@/helpers/index'
 import { Header, Main, Footer } from '@/components/layout'
 import {
@@ -28,6 +34,14 @@ const App = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     handleUtms({ router })
     handleReferer()
+
+    const urlParamLocale = router.query.locale
+    urlParamLocale
+      ? sessionStorage.setItem(
+          sessionStorageKeys.locale,
+          urlParamLocale.toString()
+        )
+      : sessionStorage.removeItem(sessionStorageKeys.locale)
 
     NProgress.configure({
       showSpinner: false

@@ -132,7 +132,7 @@ const buildLeadEmailTbodyTrs = ({ data }: TypebuildLeadEmailTbodyTrsProps) => [
   },
   {
     tdKey: 'Yandex Metrics ID',
-    tdVal: ''
+    tdVal: data.ymUid || ''
   },
   {
     tdKey: 'Устройство пользователя',

@@ -1,7 +1,8 @@
 import {
   TypeFormLeadValues,
   TypeGeneralUtms,
-  TypeGeneralReferer
+  TypeGeneralReferer,
+  TypeGeneralYmUid
 } from '@/types/index'
 
 type TypeGeneralLeadClientValues = TypeFormLeadValues & {
@@ -10,6 +11,7 @@ type TypeGeneralLeadClientValues = TypeFormLeadValues & {
   readonly leadPage: string
   readonly utms: TypeGeneralUtms
   readonly referer: TypeGeneralReferer
+  readonly ymUid: TypeGeneralYmUid
 }
 
 export default TypeGeneralLeadClientValues

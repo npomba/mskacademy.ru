@@ -1,9 +1,11 @@
 import stls from '@/styles/components/layout/Header.module.sass'
 import { TypeGeneralClassNames } from '@/types/index'
 import { useContext } from 'react'
+import { Router, useRouter } from 'next/router'
 import cn from 'classnames'
-import { phoneNumber } from '@/config/index'
+import { phoneNumber, phoneNumberKK } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
+import { useSSLocale } from '@/hooks/index'
 import { ContextMenuContext } from '@/context/index'
 import { HeaderMenuDesktop, HeaderMenuMobile } from '@/components/header'
 import { Wrapper } from '@/components/layout'
@@ -15,6 +17,22 @@ type TypeHeaderProps = TypeGeneralClassNames
 
 const Header = ({ classNames }: TypeHeaderProps) => {
   const { setMemuIsOpen } = useContext(ContextMenuContext)
+
+  const { locale, query } = useRouter()
+
+  const SSLocale = useSSLocale()
+
+  const atKz =
+    locale === 'kz' ||
+    locale === 'kk' ||
+    locale === 'kk_KZ' ||
+    SSLocale === 'kz' ||
+    SSLocale === 'kk' ||
+    SSLocale === 'kk_KZ' ||
+    query.locale === 'kz' ||
+    query.locale === 'kk' ||
+    query.locale === 'kk_KZ'
+
   return (
     <header
       className={
@@ -28,9 +46,9 @@ const Header = ({ classNames }: TypeHeaderProps) => {
         </div>
         <GeneralContactCTA
           classNames={[stls.contact]}
-          href={phoneNumber.href}
-          value={phoneNumber.val}
-          lable={'Бесплатно по России'}
+          href={atKz ? phoneNumberKK.href : phoneNumber.href}
+          value={atKz ? phoneNumberKK.val : phoneNumber.val}
+          lable={atKz ? 'Бесплатно по Казахстану' : 'Бесплатно по России'}
           variant={'size-xl'}
         />
         <a
