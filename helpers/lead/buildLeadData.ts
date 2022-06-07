@@ -19,6 +19,7 @@ const buildLeadData = ({
   leadPage,
   utms,
   referer,
+  ymUid,
   rootPath,
   ip,
   location
@@ -33,6 +34,7 @@ const buildLeadData = ({
     name: name || null,
     phone: phone || null,
     email: email || null,
+    ymUid: ymUid || null,
     vk: null,
     promocode: null,
     contactWay: null,

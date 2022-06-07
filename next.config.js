@@ -8,9 +8,9 @@ const nextConfig = withPWA({
   reactStrictMode: true,
   poweredByHeader: false,
   i18n: {
-    locales: ['ru', 'kz', 'uz'],
-    defaultLocale: 'ru',
-    localeDetection: false
+    locales: ['ru_RU', 'kk_KZ', 'uz_UZ'],
+    defaultLocale: 'ru_RU',
+    localeDetection: true
   },
   images: {
     domains: ['res.cloudinary.com']

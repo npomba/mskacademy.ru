@@ -44,6 +44,7 @@ export type { default as TypeGeneralRoute } from '@/types/general/TypeGeneralRou
 export type { default as TypeGeneralRoutesFront } from '@/types/general/TypeGeneralRoutesFront'
 export type { default as TypeGeneralSelectors } from '@/types/general/TypeGeneralSelectors'
 export type { default as TypeGeneralUtms } from '@/types/general/TypeGeneralUtms'
+export type { default as TypeGeneralYmUid } from '@/types/general/TypeGeneralYmUid'
 
 // ./inputs
 export type { default as TypeInput } from '@/types/inputs/TypeInput'

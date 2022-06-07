@@ -2,6 +2,7 @@ import {
   TypeFormLeadValues,
   TypeGeneralUtms,
   TypeGeneralReferer,
+  TypeGeneralYmUid,
   TypeGeneralLeadClientValues
 } from '@/types/index'
 import { Dispatch, SetStateAction } from 'react'
@@ -35,6 +36,10 @@ const onSubmitForm = async ({
     sessionStorage.getItem('referer') || '{}'
   )
 
+  const ymUid: TypeGeneralYmUid = JSON.parse(
+    localStorage.getItem('_ym_uid') || '{}'
+  )
+
   sessionStorage.removeItem('utms')
   sessionStorage.removeItem('referer')
 
@@ -47,7 +52,8 @@ const onSubmitForm = async ({
       ...utms,
       utm_term: utms.utm_term && decodeURIComponent(utms.utm_term)
     },
-    referer
+    referer,
+    ymUid
   }
 
   const req = await hitLeadRoute({ lead })
